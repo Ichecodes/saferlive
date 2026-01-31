@@ -1,0 +1,379 @@
+/* =========================================================
+   BRAND VARIABLES (SAFER NG)
+   ========================================================= */
+:root {
+  --safer-green: #0b6e4f;
+  --safer-green-light: #e6f4ef;
+  --safer-green-muted: #6fbfa3;
+  --ink: #1a1a1a;
+  --paper: #ffffff;
+  --border: #d5d5d5;
+}
+
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f3f6f5;
+  color: var(--ink);
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PAGE POSITIONING
+   ========================================================= */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+#invoiceRoot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================================================
+   BACK BUTTON (FULL WIDTH, INVOICE-ALIGNED)
+   ========================================================= */
+
+.back-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* Match invoice width and center */
+.back-btn button {
+  width: 100%;
+  max-width: 840px;              /* SAME as invoice-card */
+  background: #0b6e4f;           /* Safer green */
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+/* Arrow spacing */
+.back-btn button::before {
+  content: "←";
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Hover / active states */
+.back-btn button:hover {
+  background: #095c42;
+}
+
+.back-btn button:active {
+  transform: translateY(1px);
+}
+
+/* Hide on print */
+@media print {
+  .back-btn {
+    display: none;
+  }
+}
+
+
+
+/* =========================================================
+   INVOICE CARD (PAPER LOOK)
+   ========================================================= */
+
+
+.invoice-card {
+  width: 100%;
+  max-width: 840px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  padding: 42px 50px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 3px solid var(--safer-green);
+  padding-bottom: 16px;
+  margin-bottom: 26px;
+}
+
+.invoice-brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.invoice-brand img {
+  height: 46px;
+  width: auto;
+}
+
+.invoice-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  color: var(--safer-green);
+}
+
+.invoice-meta {
+  text-align: right;
+  font-size: 13px;
+  color: #333;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+.invoice-body {
+  width: 100%;
+}
+
+/* =========================================================
+   BILL TO / BANK DETAILS
+   ========================================================= */
+.bill-to {
+  display: flex;
+  justify-content: space-between;
+  gap: 42px;
+  margin-bottom: 30px;
+}
+
+.bill-card {
+  flex: 1;
+}
+
+.bill-card h4 {
+  font-size: 13px;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--safer-green);
+  border-bottom: 1px solid var(--safer-green-muted);
+  padding-bottom: 4px;
+}
+
+.bill-card p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+.table-wrap {
+  width: 100%;
+  margin-top: 22px;
+}
+
+table.invoice-items {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.invoice-items th,
+table.invoice-items td {
+  border: 1px solid var(--border);
+  padding: 10px 8px;
+}
+
+table.invoice-items th {
+  font-weight: bold;
+  font-size: 13px;
+  background: var(--safer-green-light);
+  color: var(--safer-green);
+}
+
+table.invoice-items td {
+  font-size: 14px;
+}
+
+table.invoice-items th:last-child,
+table.invoice-items td:last-child {
+  text-align: right;
+}
+
+/* =========================================================
+   TOTALS
+   ========================================================= */
+.invoice-totals {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 26px;
+}
+
+.totals-inner {
+  width: 320px;
+}
+
+.totals-inner .line {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dotted #999;
+}
+
+.totals-inner .grand {
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--safer-green);
+  border-bottom: 3px solid var(--safer-green);
+  padding-top: 10px;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+.invoice-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+
+.invoice-actions button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-pay {
+  background: var(--safer-green);
+  color: #fff;
+  border: 1px solid var(--safer-green);
+}
+
+.btn-wa {
+  background: #ffffff;
+  color: var(--safer-green);
+  border: 1px solid var(--safer-green);
+}
+
+.btn-print {
+  background: #f0f0f0;
+  border: 1px solid #bbb;
+}
+
+/* =========================================================
+   PAYMENT INSTRUCTIONS
+   ========================================================= */
+.payment-instructions {
+  margin-top: 34px;
+  font-size: 13px;
+}
+
+.payment-instructions h3 {
+  font-size: 14px;
+  color: var(--safer-green);
+  margin-bottom: 10px;
+}
+
+.payment-instructions .note {
+  margin-top: 10px;
+  font-style: italic;
+  color: #444;
+}
+
+/* =========================================================
+   FOOTER WITH ICONS (CENTERED)
+   ========================================================= */
+.footer {
+  margin-top: 42px;
+  padding-top: 14px;
+  border-top: 1px solid var(--safer-green-muted);
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.footer-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--safer-green);
+  display: inline-flex;
+}
+
+.footer-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.footer-item a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--safer-green-muted);
+}
+
+.footer-item a:hover {
+  color: var(--safer-green);
+}
+
+/* =========================================================
+   PRINT STYLES
+   ========================================================= */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .invoice-card {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  .invoice-actions {
+    display: none;
+  }
+}

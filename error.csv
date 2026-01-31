@@ -1,0 +1,24 @@
+error_id,log_time,file,error695dd57019abc0.15519466,2026-01-07T04:39:28+01:00,reports.php,"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'location' in 'field list'
+#0 C:\xampp\htdocs\safer\api\incidents\reports.php(63): PDO->prepare('INSERT INTO inc...')
+#1 {main}"
+695dd59f727656.11906760,2026-01-07T04:40:15+01:00,reports.php,"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'location' in 'field list'
+#0 C:\xampp\htdocs\safer\api\incidents\reports.php(63): PDO->prepare('INSERT INTO inc...')
+#1 {main}"
+695dde0d66b5d9.87069869,2026-01-07T05:16:13+01:00,reports.php,"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'field list'
+#0 C:\xampp\htdocs\safer\api\incidents\reports.php(63): PDO->prepare('INSERT INTO inc...')
+#1 {main}"
+695de2814b9b87.39641729,2026-01-07T05:35:13+01:00,reports.php,"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category' in 'field list'
+#0 C:\xampp\htdocs\safer\api\incidents\reports.php(63): PDO->prepare('INSERT INTO inc...')
+#1 {main}"
+695e1c79569e59.98797525,2026-01-07T09:42:33+01:00,reports.php,"SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+#0 C:\xampp\htdocs\safer\api\incidents\reports.php(65): PDO->prepare('INSERT INTO inc...')
+#1 {main}"
+695e1c7c22e930.43149111,2026-01-07T09:42:36+01:00,reports.php,"SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+#0 C:\xampp\htdocs\safer\api\incidents\reports.php(65): PDO->prepare('INSERT INTO inc...')
+#1 {main}"
+695e7288954ec9.92470156,2026-01-07T15:49:44+01:00,jobs.php,"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'safer_ng.job_requests' doesn't exist
+#0 C:\xampp\htdocs\safer\api\jobs\jobs.php(74): PDO->query('SELECT\r\n       ...')
+#1 {main}"
+695e728895a5e9.53558108,2026-01-07T15:49:44+01:00,jobs.php,"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'safer_ng.job_requests' doesn't exist
+#0 C:\xampp\htdocs\safer\api\jobs\jobs.php(74): PDO->query('SELECT\r\n       ...')
+#1 {main}"

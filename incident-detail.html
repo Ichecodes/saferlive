@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Incident Details</title>
+
+  <link rel="stylesheet" href="styles/incidents.css">
+  <link rel="stylesheet" href="styles/incident-detail.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+  <div data-include="nav.html"></div>
+
+  <!-- Title - Header -->
+  <div class="page-header">
+   
+    <div class="header-top">
+      <a href="incidents.html" class="btn btn--ghost btn--small back-btn">← Back</a>
+    </div>
+
+    <div class="title-nav-wrapper">
+      
+      <button id="prev-incident" class="btn btn--outline btn--small" disabled aria-label="Previous incident">
+        ← Prev
+      </button>
+
+      <div class="title-content">
+        <h1 id="incident-title">Loading…</h1>
+        <p id="incident-subtitle" class="page-info"></p>
+      </div>
+
+      <button id="next-incident" class="btn btn--outline btn--small" disabled aria-label="Next incident">
+        Next →
+      </button>
+
+    </div>
+    
+  </div>
+
+  <main class="incidents-page">
+
+    <!-- Main Content -->
+    <section class="main-content" id="incident-root">
+
+      <!-- Loading -->
+      <div id="loading" class="loading-row">
+        Loading incident…
+      </div>
+
+      <!-- Error -->
+      <div id="error" class="loading-row" hidden>
+        Incident not found
+      </div>
+
+      <!-- Incident Card -->
+      <article id="incident-card" class="analytics-card" hidden>
+
+        <!-- Card Header -->
+        <div class="incident-card-header">
+          <div>
+            <h2 id="type-heading"></h2>
+            <p id="location-line" class="page-info"></p>
+          </div>
+
+          <div class="incident-actions">
+            <div id="status-badge" class="status-badge"></div>
+
+            <div class="action-buttons">
+              <a href="incidents.html" class="btn btn--ghost btn--small">
+                Back to list
+              </a>
+
+              <button id="share-btn" class="btn btn--outline btn--small">
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <section class="media-section">
+          <h3>Photos</h3>
+
+          <div id="photo-gallery" class="media-gallery"></div>
+
+          <div id="photo-placeholder" class="media-placeholder" hidden>
+            No photos available for this incident
+          </div>
+        </section>
+
+        <!-- Details -->
+        <section class="details-section">
+          <h3>Incident Details</h3>
+
+          <div class="details-grid">
+            <div>
+              <strong>Incident Type</strong>
+              <div id="detail-type" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Category</strong>
+              <div id="detail-category" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Status</strong>
+              <div id="detail-status" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Started</strong>
+              <div id="detail-start" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Closed</strong>
+              <div id="detail-end" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Duration</strong>
+              <div id="detail-duration" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>State</strong>
+              <div id="detail-state" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>LGA</strong>
+              <div id="detail-lga" class="page-info">—</div>
+            </div>
+
+            <div class="span-full">
+              <strong>Exact Location</strong>
+              <div id="detail-location" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Victims</strong>
+              <div id="detail-victims" class="page-info">—</div>
+            </div>
+
+            <div>
+              <strong>Casualties</strong>
+              <div id="detail-casualties" class="page-info">—</div>
+            </div>
+
+            <div class="span-full">
+              <strong>Description</strong>
+              <div id="detail-description" class="page-info">—</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map-section">
+          <h3>Location</h3>
+          <div id="map-container"></div>
+        </section>
+
+      </article>
+
+    </section>
+  </main>
+  <div data-include="footer.html"></div>
+
+  <!-- Script -->
+  <script src="./scripts/incident-detail.js" defer></script>
+  <script src="scripts/include-fragments.js" defer></script>
+
+</body>
+</html>

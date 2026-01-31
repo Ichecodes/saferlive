@@ -1,0 +1,15 @@
+{
+  "bank": {
+    "name": "Fidelity Bank",
+    "account_number": "5601161364",
+    "account_name": "AQQUTE LABS LIMITED"
+  },
+  "contact": {
+    "phone": "+234000000000",
+    "email": "Team@Safer.ng",
+    "website": "https://safer.ng",
+    "address": "Lagos, Nigeria"
+  },
+  "paystack_public_key": "pk_live_a3634c90ed913d3cfeafae5a8d908efed48873d0", 
+  "whatsapp_number": "+234000000000"
+}

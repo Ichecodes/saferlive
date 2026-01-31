@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Incident List | Safer.ng</title>
+  <link rel="stylesheet" href="styles/incidents.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"  rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+</head>
+
+<body>
+  <div data-include="nav.html"></div>
+
+
+   <!-- Title - Header -->
+    <div class="page-header">
+      <h1>Public Incident List</h1>
+      <p>Real-time security incidents across Nigeria</p>
+    </div>
+ 
+  <main class="incidents-page">
+   
+   
+       <!-- Filter Overlay (Mobile) -->
+    <div class="filter-overlay" id="filterOverlay"></div>
+
+    <div class="page-layout">
+      <!-- Left-hand AI Sidebar -->
+     
+      <aside class="ai-sidebar">
+        <div class="analytics-card card-ai" id="aiRight">
+          <h3>AI Intelligence Summary</h3>
+          <div id="aiSummaryRight" class="ai-summary">
+            <p class="loading">Loading intelligence summary...</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="main-content">
+        <!-- Analytics Dashboard (8 Cards) -->
+            <section class="analytics-dashboard">
+                 
+              
+              <!-- Combined: Summary + Victim stats (long card) -->
+                  <div class="analytics-card card-summary-victims">                    
+                    
+                    <div class="summary-victim-inner">
+
+                      <!-- summary -->
+                      <div class="summary-left">
+                        <h3>Incident Summary</h3>
+                        <div class="summary-stats">
+                          <div class="stat-item">
+                            <span class="stat-value" id="totalIncidents">0</span>
+                            <span class="stat-label">Total Incidents</span>
+                          </div>
+                          <div class="stat-item">
+                            <span class="stat-value" id="totalLGAs">0</span>
+                            <span class="stat-label">LGAs Affected</span>
+                          </div>
+                          <div class="stat-item">
+                            <span class="stat-value" id="totalCommunities">0</span>
+                            <span class="stat-label">Communities Affected</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- victims -->
+                      <div class="victim-right">
+                        <h3>Victim Statistics</h3>
+                        <div class="victim-stats">
+                          <div class="victim-item">
+                            <span class="victim-value" id="totalVictims">0</span>
+                            <span class="victim-label">Total Victims</span>
+                          </div>
+                          <div class="victim-item">
+                            <span class="victim-value" id="totalCasualties">0</span>
+                            <span class="victim-label">Total Casualties</span>
+                          </div>
+                          <div class="victim-item">
+                            <span class="victim-value" id="totalMissing">0</span>
+                            <span class="victim-label">Total Missing</span>
+                          </div>
+                          <div class="victim-item">
+                            <span class="victim-value" id="totalInjured">0</span>
+                            <span class="victim-label">Total Injured</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Row: Map (50%), Status (25%), Timeline (25%) -->
+                  <div class="analytics-row">
+                    <div class="analytics-card card-map">
+                      <h3>Incident Map</h3>
+                      <div id="incidentMap"></div>
+                    </div>
+
+                    <div class="analytics-card card-chart card-status">
+                      <h3>Status Distribution</h3>
+                      <canvas id="statusChart"></canvas>
+                    </div>
+
+                    
+                  </div>
+
+                  <!-- Timeline (full width below the row) -->
+                  <div class="analytics-row">
+                      <div class="analytics-card card-chart timeline-full">
+                        <h3>Timeline</h3>
+                        <canvas id="timelineChart"></canvas>
+                      </div>
+
+                      <div class="analytics-card card-chart card-type">
+                          <h3>Type Breakdown</h3>
+                          <canvas id="typeChart"></canvas>
+                        </div>
+                  </div>
+              </section>
+
+              <!-- Incident Table -->
+            <section class="incidents-table-section">
+              <div class="table-header">
+                <h2>Incidents</h2>
+                <!-- sort controls removed -->
+              </div>
+
+              <div class="table-wrapper">
+                <table id="incidentsTable" class="incidents-table">
+                  <thead>
+                    <tr>
+                      <th>Status</th>
+                      <th>Type</th>
+                      <th>State</th>
+                      <th>LGA</th>
+                      <th>Start Time</th>
+                      <th>Duration</th>
+                      <th>Victims</th>
+                      <th>Casualties</th>
+                      <th>Location</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="incidentsTableBody">
+                    <tr>
+                      <td colspan="10" class="loading-row">Loading incidents...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Pagination -->
+              <div class="pagination">
+                <button id="prevPage" class="btn btn--outline" disabled>Previous</button>
+                <span class="page-info">
+                  Page <span id="currentPage">1</span> of <span id="totalPages">1</span>
+                </span>
+                <button id="nextPage" class="btn btn--outline" disabled>Next</button>
+              </div>
+            </section>
+
+      </div>
+
+      <!-- Filters Sidebar (right) -->
+      <aside class="filters-sidebar" id="filtersSidebar">
+        <div class="filters-header">
+          <h3>Filters</h3>
+          <button class="close-filters" id="closeFilters" aria-label="Close filters">×</button>
+        </div>
+
+        <form id="filterForm" class="filter-form">
+          <div class="filter-group">
+            <label for="filterSearch">Search</label>
+            <input type="text" id="filterSearch" name="search" placeholder="Search incidents by type, state, LGA, or description...">
+          </div>
+          <!-- <div class="filter-group">
+            <label for="filterCategory">Category</label>
+            <select id="filterCategory" name="category">
+              <option value="">All Categories</option>
+              <option value="kidnapping">Kidnapping</option>
+              <option value="robbery">Robbery</option>
+              <option value="terror">Terror</option>
+              <option value="communal">Communal Clash</option>
+              <option value="road">Road Attack</option>
+              <option value="assault">Assault</option>
+            </select>
+          </div> -->
+
+          <div class="filter-group">
+            <label for="filterState">State</label>
+            <select id="filterState" name="state">
+              <option value="">All States</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterType">Type</label>
+            <select id="filterType" name="type">
+              <option value="">All Types</option>
+              <option value="kidnapping">Kidnapping</option>
+              <option value="robbery">Robbery</option>
+              <option value="terror">Terror</option>
+              <option value="communal">Communal Clash</option>
+              <option value="road">Road Attack</option>
+              <option value="assault">Assault</option>
+            </select>
+          </div>
+
+          <!-- <div class="filter-group">
+            <label for="filterStatus">Status</label>
+            <select id="filterStatus" name="status">
+              <option value="">All Status</option>
+              <option value="open">Open</option>
+              <option value="closed">Closed</option>
+              <option value="pending">Pending Verification</option>
+            </select>
+          </div> -->
+
+          <div class="filter-group">
+            <label for="filterYear">Year</label>
+            <input type="number" id="filterYear" name="year" min="2000" max="2100" placeholder="2024">
+          </div>
+
+          <div class="filter-actions">
+            <button type="submit" class="btn btn--primary">Apply Filters</button>
+            <button type="button" id="resetFilters" class="btn btn--outline">Reset</button>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+    <div data-include="footer.html"></div>
+
+  <!-- Mobile fixed search bar (visible on small screens) -->
+  <div class="mobile-search-bar" id="mobileSearchBar">
+    <input type="text" id="mobileSearch" placeholder="Search incidents...">
+    <button class="filter-toggle-btn" id="filterToggleMobile" aria-label="Toggle filters">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 6h14M6 10h8M9 14h2"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Floating Report Incident Button -->
+  <a href="./report.html" class="floating-report-btn" id="reportBtn" aria-label="Report an incident">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 9v4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M12 17h.01" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Report Incident</span>
+  </a> 
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script src="scripts/map.js" defer></script>
+  <script src="scripts/incidents.js" defer></script>
+  <script src="scripts/search.js" defer></script>
+  <script src="scripts/include-fragments.js" defer></script>
+
+
+  
+
+</body>
+
+
+</html>
+

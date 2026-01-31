@@ -1,0 +1,30 @@
+<header class="site-nav" role="banner">
+  <!-- Site navigation header: top-level banner for branding and navigation -->
+  
+  <div class="site-nav__inner">
+    <!-- Inner container: layout wrapper (typically a flex container) that holds
+         the brand, primary links, and user action links -->
+    
+        <a class="site-nav__brand" href="index.html">
+        <!-- Brand link: clicking returns user to the homepage -->
+             <img src="assets/logo.svg" alt="Safer" class="site-nav__logo">
+        <!-- Logo image for the site; update src to change the displayed logo -->
+        </a>
+    
+        <nav class="site-nav__links" role="navigation">
+        <!-- Primary navigation links: change, add or remove anchors as needed -->
+           <a href="incidents.html" data-nav="incidents">Incidents</a>
+           <!-- Link to incidents listing page -->
+           <a href="report.html" data-nav="report">Report</a>
+           <!-- Link to the report submission page -->
+           <a href="agent-request.html" data-nav="request">Request Security</a>
+        <!-- Link to the agent/security request form -->
+        </nav>
+    
+        <nav class="site-nav__actions" role="navigation">
+            <!-- Secondary/action links (login, signup, account, etc.) -->
+            <a href="#" data-nav="login" class="site-nav__login">Login</a>
+            <!-- Replace href with the actual login URL when available -->
+        </nav>
+  </div>
+</header>

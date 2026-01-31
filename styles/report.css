@@ -1,0 +1,157 @@
+/* Safer NG report page styles — match app design system */
+:root{
+	--bg:#00120a;
+	--nav-height:72px; /* height reserved for the fixed header (adjust if header height changes) */
+	--fg:#ffffff;
+	--muted:#9bb5a7;
+	--primary:#d3212c;
+	--secondary:#ff681e;
+	--accent:#069c56;
+	--surface:rgba(255,255,255,0.04);
+	--border:rgba(255,255,255,0.08);
+	--shadow:0 20px 60px rgba(0,0,0,0.4);
+	--radius:18px;
+	--radius-sm:12px;
+	--max-width:980px;
+	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+/* Ensure page content begins below the fixed navigation header by adding
+   top padding equal to the nav height plus the base page padding. */
+body{margin:0;
+	background:var(--bg);color:var(--fg);font-family:var(--font-family);line-height:1.5;padding:24px;padding-top:calc(var(--nav-height) + 12px);}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:12px}
+
+/* Title section */
+
+#title-div{
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+	margin-bottom:24px}
+
+.page-title{
+	font-size:clamp(20px,4vw,28px);margin:12px 0 18px;color:var(--fg);font-weight:700;
+	text-align:center;}
+
+/* Report card styles */
+
+.report-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);}
+.card-section{
+	border-top:1px solid rgba(255,255,255,0.02);
+	padding:16px;
+	margin-top:18px;
+	background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+	border-radius:10px;
+}
+.card-section + .card-section{margin-top:20px}
+.card-section:first-of-type{border-top:none;padding-top:0}
+.section-title{margin:0 0 10px;font-size:16px;font-weight:700}
+.sub-title{margin:8px 0 6px;font-size:14px;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+.grid.small{grid-template-columns:repeat(2,1fr)}
+
+.field{display:flex;flex-direction:column}
+.field.full{grid-column:1/-1}
+.label{font-weight:600;margin-bottom:6px}
+.helper{font-size:13px;color:var(--muted);margin-top:6px}
+
+
+
+input[type="text"],input[type="email"],input[type="tel"],input[type="datetime-local"],input[type="number"],select,textarea{
+	background:transparent;color:var(--fg);border:1px solid var(--border);padding:10px;border-radius:12px;outline:none
+}
+
+
+input[readonly]{opacity:0.85}
+textarea{min-height:120px;resize:vertical}
+
+.coords{display:flex;gap:8px;align-items:center}
+.coord-values{display:flex;gap:8px;flex:1}
+.coord-values input{flex:1}
+
+/* Prominent location button */
+.btn-location{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:var(--accent);color:#fff;font-weight:700}
+.btn-location.btn--outline{border:none}
+
+@media(max-width:720px){
+	.coords{flex-direction:column;align-items:stretch}
+	.coord-values{display:flex;gap:8px}
+	.coord-values input{width:100%}
+}
+
+.photo-previews{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.preview-item{width:88px;height:88px;border-radius:10px;overflow:hidden;position:relative;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center}
+.preview-thumb{width:100%;height:100%;object-fit:cover;display:block}
+.remove-photo{position:absolute;bottom:6px;left:6px;padding:4px 6px;font-size:12px;border-radius:6px;background:rgba(0,0,0,0.5);color:#fff;border:none;cursor:pointer}
+
+.consent{display:flex;align-items:flex-start;gap:12px;padding:14px 0}
+.consent input{margin-right:8px;margin-top:3px}
+
+.actions{display:flex;justify-content:flex-end;padding-top:12px}
+.btn{font-weight:700;padding:10px 14px;border-radius:12px;border:none;cursor:pointer}
+.btn--primary{background:var(--primary);color:#fff}
+.btn--outline{background:transparent;border:1px solid var(--border);color:var(--fg)}
+.btn--ghost{background:transparent;border:1px dashed rgba(255,255,255,0.06);color:var(--muted)}
+.btn--small{padding:6px 8px;border-radius:8px;font-size:13px}
+
+.inline-error{color:#ffb4b4;background:rgba(211,33,44,0.06);padding:8px;border-radius:8px;margin-top:6px}
+.hidden{display:none}
+
+.result-card{background:linear-gradient(180deg, rgba(6,156,86,0.08), transparent);border:1px solid rgba(6,156,86,0.15);padding:16px;border-radius:12px;margin-top:16px}
+
+/* Responsive adjustments */
+@media(min-width:720px){
+	.grid{grid-template-columns:repeat(2,1fr)}
+	.grid.small{grid-template-columns:repeat(4,1fr)}
+	.field.full{grid-column:1/-1}
+}
+
+@media(max-width:680px){
+	body{padding:16px}
+	.report-card{padding:14px}
+	.preview-item{width:72px;height:72px}
+}
+
+
+.address-with-btn {
+  position: relative;
+}
+
+.address-with-btn input {
+  width: 100%;
+  padding-right: 48px; /* space for icon inside input */
+}
+
+.address-with-btn button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.address-with-btn button svg {
+  width: 22px;
+  height: 22px;
+  pointer-events: none; /* prevents SVG blocking button clicks */
+}
+
+
+.address-with-btn button:hover svg path {
+  stroke: #059669;
+}
+
+.address-with-btn input:focus {
+  outline: none;
+  border-color: #06c270;
+}

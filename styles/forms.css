@@ -1,0 +1,110 @@
+:root{
+  --safer-bg:#071014; /* page form container background */
+  --safer-form:#0b1a1a; /* form wrapper background */
+  --safer-field:#091414; /* input/select background (slightly darker) */
+  --safer-text:#ffffff;
+  --safer-muted:rgba(255,255,255,0.65);
+  --safer-border:rgba(255,255,255,0.06);
+  --safer-green:#2bb673;
+  --safer-radius:8px;
+  --safer-gap:12px;
+}
+
+/* Form wrapper to standardize look */
+.form-wrapper{
+  background:var(--safer-form);
+  color:var(--safer-text);
+  padding:18px;
+  border-radius:var(--safer-radius);
+  border:1px solid var(--safer-border);
+  box-shadow:0 6px 18px rgba(2,6,23,0.5);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.form-row{display:flex;gap:var(--safer-gap);flex-wrap:wrap}
+.form-group{display:flex;flex-direction:column;gap:8px;flex:1 1 220px}
+.form-group.full{flex-basis:100%}
+.form-label{font-size:13px;color:var(--safer-muted)}
+
+/* Inputs, selects, textareas */
+.form-input, input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea{
+  background:var(--safer-field);
+  color:var(--safer-text);
+  border:1px solid var(--safer-border);
+  padding:10px 12px;
+  border-radius:6px;
+  font-size:14px;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease, transform .06s ease;
+}
+
+select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg, transparent 50%, var(--safer-muted) 50%), linear-gradient(135deg, var(--safer-muted) 50%, transparent 50%);background-position:calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:36px}
+
+textarea{min-height:100px;resize:vertical}
+
+/* Focus states using Safer green */
+.form-input:focus, select:focus, textarea:focus{
+  border-color:var(--safer-green);
+  box-shadow:0 0 0 4px rgba(43,182,115,0.12);
+}
+
+/* Placeholder color */
+::placeholder{color:rgba(255,255,255,0.35)}
+
+/* Buttons */
+.form-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+.btn{padding:10px 14px;border-radius:8px;border:1px solid transparent;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--safer-green);color:#042612}
+.btn-ghost{background:transparent;color:var(--safer-text);border:1px solid var(--safer-border)}
+
+/* Small form helper / error */
+.form-help{font-size:13px;color:var(--safer-muted)}
+.form-error{color:#ff7b7b;font-size:13px}
+
+/* Inputs inside form-wrapper inherit spacing */
+.form-wrapper .form-group + .form-group{margin-top:0}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .form-row{flex-direction:column}
+  .form-actions{justify-content:stretch}
+}
+
+/* make select dropdown highlight green on supported browsers */
+select:focus::-ms-value{background:transparent}
+select:focus{accent-color:var(--safer-green)}
+
+/* Global overrides to ensure all native controls use the same styles */
+/* target general form controls site-wide so markup differences don't matter */
+input, input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, select {
+  background: var(--safer-field) !important;
+  color: var(--safer-text) !important;
+  border: 1px solid var(--safer-border) !important;
+  padding: 10px 12px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove native focus rings and replace with Safer green highlight */
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(43,182,115,0.12) !important;
+  border-color: var(--safer-green) !important;
+}
+
+/* Override browser-specific focus ring color (Chrome/Safari) */
+*:focus {
+  -webkit-focus-ring-color: rgba(0,0,0,0) !important;
+}
+
+/* Option highlight where supported */
+select option:checked, select option:focus {
+  background: var(--safer-green);
+  color: #042612;
+}
+
+/* Hide default clear icons on some browsers for consistency */
+input::-ms-clear, input::-ms-reveal { display: none; }
+

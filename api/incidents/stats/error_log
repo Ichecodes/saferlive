@@ -1,0 +1,8 @@
+[07-Jan-2026 17:41:17 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'admin'@'localhost' (using password: YES)
+[07-Jan-2026 18:44:16 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user 'admin'@'localhost' (using password: YES)
+[07-Jan-2026 22:25:44 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user '
+lyrivers_admin'@'localhost' (using password: YES)
+[07-Jan-2026 22:26:09 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user '
+lyrivers_admin'@'localhost' (using password: YES)
+[09-Jan-2026 09:47:27 UTC] Database connection failed: SQLSTATE[28000] [1045] Access denied for user '
+lyrivers_admin'@'localhost' (using password: YES)

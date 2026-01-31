@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Report Incident (Admin)</title>
+  <link rel="stylesheet" href="rprt.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  
+</head>
+
+ <div data-include="nav.html"></div>
+
+<body>
+ 
+  <h1 class="page-title">Report an Incident</h1>
+
+  <div id="submissionError" style="display:none;color:#8a1f11;background:#fff1f0;border:1px solid #f5c6cb;padding:12px;border-radius:6px;margin:12px 0;">
+    <strong style="display:block;margin-bottom:6px">Submission Error</strong>
+    <pre id="submissionErrorPre" style="white-space:pre-wrap;margin:0;font-size:13px;color:#5a1111"></pre>
+  </div>
+
+  <main class="container" id="title-div">
+   
+    
+    <form id="reportForm" class="analytics-card report-card" method="POST" enctype="multipart/form-data" novalidate>
+
+      <section class="card-section">
+        <h2 class="section-title">Incident Details</h2>
+
+        <div class="grid">
+          <label class="field">
+            <span class="label">Title</span>
+            <input name="title" id="title" maxlength="70" placeholder="Kidnapping in PH-Owerri road at Mbirichi town" required>
+            <small class="helper">Keep it short and specific (max 70 chars)</small>
+          </label>
+
+          <label class="field">
+            <span class="label">Type</span>
+            <select name="type" id="type" required>
+              <option value="">Select type</option>
+              <option>Kidnapping</option>
+              <option>Robbery</option>
+              <option>Terror</option>
+              <option>Assault</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field full">
+            <span class="label">Description</span>
+            
+            <textarea name="description" id="description" required rows="4"></textarea>
+          </label>
+
+          <div class="field">
+            <label class="label">Photos</label>
+            <input type="file" id="photos" name="photos[]" multiple accept="image/*">
+            <div id="photo-previews" class="photo-previews"></div>
+            <small class="helper">Add up to 8 images. You can remove images before submission.</small>
+          </div>
+
+          <label class="field">
+            <span class="label">Date &amp; time</span>
+            <input type="datetime-local" name="datetime" id="datetime" required>
+          </label>
+        </div>
+
+        <div class="grid">
+          <label class="field">
+            <span class="label">State</span>
+            <select name="state" id="state" required></select>
+          </label>
+
+          <label class="field">
+            <span class="label">LGA</span>
+            <select name="lga" id="lga" required>
+              <option value="">Select state first</option>
+            </select>
+          </label>
+
+          
+
+          <label class="field">
+            <span class="label">Area</span>
+            <select id="place" disabled>
+              <option value="">Select state and LGA</option>
+            </select>
+            <small class="helper">Select the closest ward or area (frontend only)</small>
+          </label>
+
+         
+
+          <label class="field">
+            <span class="label">Address or Location (optional)</span>
+            <input name="location" id="location" placeholder="Street, building, or nearest landmark">
+            <small class="helper">Precise Location, Address, Road, a Junction, or a Landmark.</small>
+          </label>
+          
+
+      </section>
+
+        
+      <section class="card-section">
+        <h2 class="section-title">Reporter Identity</h2>
+        <div class="grid">
+          <label class="field">
+            <span class="label">Full name</span>
+            <input name="full_name" id="full_name" required>
+          </label>
+
+          <label class="field">
+            <span class="label">Nickname (optional)</span>
+            <input name="nickname" id="nickname">
+          </label>
+        </div>
+
+        <h3 class="sub-title">Contact</h3>
+        <div class="grid">
+          <label class="field">
+            <span class="label">Email</span>
+            <input name="email" id="email" type="email">
+            <div class="inline-error" id="contact-error" hidden>Please provide at least an email or phone number.</div>
+          </label>
+
+          <label class="field">
+            <span class="label">Phone</span>
+            <input name="phone" id="phone" inputmode="tel">
+          </label>
+        </div>
+
+        <h3 class="sub-title">Social handle</h3>
+        <div class="grid">
+          <label class="field">
+            <span class="label">Platform</span>
+            <select id="social-platform">
+              <option value="">Select platform</option>
+              <option value="twitter">Twitter (X)</option>
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="tiktok">TikTok</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="label">Handle or profile link</span>
+            <input id="social-handle" disabled>
+          </label>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <h2 class="section-title">Impact Metrics (optional)</h2>
+        <div class="grid small">
+          <label class="field"><span class="label">Victims</span><input type="number" min="0" name="victims" id="victims"></label>
+          <label class="field"><span class="label">Injured</span><input type="number" min="0" name="injured" id="injured"></label>
+          <label class="field"><span class="label">Dead</span><input type="number" min="0" name="dead" id="dead"></label>
+          <label class="field"><span class="label">Missing</span><input type="number" min="0" name="missing" id="missing"></label>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <label class="consent"><input type="checkbox" id="verify"> I hereby verify that this information is accurate to the best of my knowledge and consent to be contacted by Safer NG.</label>
+        <div class="actions">
+          <button type="submit" id="submitBtn" class="btn btn--primary" disabled>Submit Report</button>
+        </div>
+      </section>
+
+    </form>
+
+    <div id="result" class="result-card hidden">
+      <h2>Incident submitted for verification</h2>
+      <p>Your report is pending review.</p>
+      <p>Permalink (inactive until approved): <span id="permalink">(not available)</span></p>
+    </div>
+  </main>
+    <div data-include="footer.html"></div>
+
+  <script src="scripts/reports.js" defer></script>
+  <script src="scripts/photos.js" defer></script>
+  <script src="scripts/include-fragments.js" defer></script>
+
+  
+</body>
+</html>

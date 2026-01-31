@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Incidents Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../styles/forms.css">
+</head>
+<body>
+  <header class="admin-header centered">
+    <h1>Incidents</h1>
+  </header>
+
+  <main class="admin-main">
+    <section class="table-card">
+      <table id="incidentsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>State</th>
+            <th>LGA</th>
+            <th>Victims</th>
+            <th id="createdAtHeader" style="cursor:pointer;user-select:none">Created At <span id="sortArrow">↓</span></th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <div id="incidentModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeIncident" class="btn-close">Close</button>
+        <div id="incidentBody"></div>
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px;">
+          <button id="approveIncidentBtn" class="btn btn--primary">Approve (Open)</button>
+          <button id="closeIncidentBtn" class="btn btn--ghost">Close Incident</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="adminy.js" defer></script>
+</body>
+</html>

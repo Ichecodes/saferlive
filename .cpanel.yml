@@ -1,0 +1,22 @@
+---
+deployment:
+  tasks:
+    # 1. Define deploy path
+    - export DEPLOYPATH=/home/lyrivers/public_html/safer.ng
+
+    # 2. Ensure target exists
+    - /bin/mkdir -p $DEPLOYPATH
+
+    # 3. Core application code
+    - /bin/cp -R api $DEPLOYPATH
+    - /bin/cp -R scripts $DEPLOYPATH
+    - /bin/cp -R xadmin $DEPLOYPATH
+
+    # 4. Frontend entry files
+    - /bin/cp *.html $DEPLOYPATH || true
+    - /bin/cp *.php  $DEPLOYPATH || true
+
+    # 5. Optional static assets (only if they exist)
+    - /bin/cp -R assets $DEPLOYPATH || true
+    - /bin/cp -R css $DEPLOYPATH || true
+    - /bin/cp -R js $DEPLOYPATH || true

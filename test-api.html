@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test - Safer.ng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #00120a;
+            color: #ffffff;
+        }
+        .test-result {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .success { border-left: 4px solid #069c56; }
+        .error { border-left: 4px solid #d3212c; }
+        pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+        h2 { color: #069c56; }
+    </style>
+</head>
+<body>
+    <h1>🔧 API Connection Test</h1>
+    <p>Testing all API endpoints to diagnose data loading issues...</p>
+    
+    <div id="results"></div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+        
+        async function testAPI(name, url) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-result';
+            resultDiv.innerHTML = `<h2>Testing ${name}...</h2><p>URL: ${url}</p>`;
+            resultsDiv.appendChild(resultDiv);
+            
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.success !== false) {
+                    resultDiv.className += ' success';
+                    resultDiv.innerHTML = `
+                        <h2>✅ ${name} - SUCCESS</h2>
+                        <p>URL: ${url}</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                } else {
+                    resultDiv.className += ' error';
+                    resultDiv.innerHTML = `
+                        <h2>❌ ${name} - ERROR</h2>
+                        <p>URL: ${url}</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.className += ' error';
+                resultDiv.innerHTML = `
+                    <h2>❌ ${name} - FAILED</h2>
+                    <p>URL: ${url}</p>
+                    <p>Error: ${error.message}</p>
+                `;
+            }
+        }
+        
+        // Test all endpoints
+        async function runTests() {
+            await testAPI('Summary Stats', './api/incidents/stats/summary.php');
+            await testAPI('Type Stats', './api/incidents/stats/types.php');
+            await testAPI('Timeline', './api/incidents/stats/timeline.php');
+            await testAPI('Victims', './api/incidents/stats/victims.php');
+            await testAPI('AI Summary', './api/ai/summary/incidents.php');
+            await testAPI('Incidents List', './api/incidents/list.php?limit=5');
+        }
+        
+        runTests();
+    </script>
+</body>
+</html>
+

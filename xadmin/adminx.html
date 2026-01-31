@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agent Requests Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../styles/forms.css">
+</head>
+<body>
+  <!--
+    Admin header is centralized per design requirement.
+    The table columns below map exactly to the `job_requests` schema.
+  -->
+  <header class="admin-header centered">
+    <h1>Agent Requests</h1>
+  </header>
+
+  <main class="admin-main">
+    <section class="table-card">
+      <table id="requestsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Agent Type</th>
+            <th>Job Type</th>
+            <th>State</th>
+            <th>LGA</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Created At</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <div id="detailModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeDetail" class="btn-close">Close</button>
+        <div id="detailBody"></div>
+        <div class="field">
+          <label for="statusSelect">Update status</label>
+          <select id="statusSelect"><option value="pending">pending</option><option value="reviewed">reviewed</option><option value="assigned">assigned</option><option value="cancelled">cancelled</option></select>
+          <button id="updateStatusBtn" class="btn">Update</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="agent-req-admin.js" defer></script>
+</body>
+</html>

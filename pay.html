@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/pay.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <title>Invoice</title>
+</head>
+<body>
+
+    <div id="back-btn" class="back-btn">
+      <button onclick="window.history.back()"> Back to Request</button>
+    </div>
+
+
+  <main id="invoiceRoot">
+    <div class="invoice-card">
+      <header class="invoice-header">
+        <div class="invoice-brand">
+          <img src="assets/logo.svg" alt="Safer logo" onerror="this.style.display='none'">
+          <div>
+            <div class="invoice-title">Safer Security Services</div>
+            <div style="font-size:12px;opacity:0.9">Invoice</div>
+          </div>
+        </div>
+        <div class="invoice-meta">
+          <div id="invoiceDate">--</div>
+          <div id="invoiceId"></div>
+        </div>
+      </header>
+
+      <section class="invoice-body">
+        <div class="bill-to">
+          <div class="bill-card">
+            <h4>Bill To</h4>
+            <p id="billName">-</p>
+            <p id="billEmail">-</p>
+            <p id="billPhone">-</p>
+          </div>
+
+          <div class="bill-card">
+            <h4>Bank Details</h4>
+            <p id="bankName">-</p>
+            <p id="bankAccount">-</p>
+            <p id="bankAccountName">-</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="invoice-items">
+            <thead>
+              <tr><th>Personnel</th><th>Rate</th><th>Number</th><th>Days</th><th>Total</th></tr>
+            </thead>
+            <tbody id="itemsBody">
+            </tbody>
+          </table>
+
+          <div class="invoice-totals">
+            <div class="totals-inner">
+              <div class="line"><span>Subtotal</span><span id="subTotal">-</span></div>
+              <div class="line"><span>VAT</span><span id="vatAmount">-</span></div>
+              <div class="line grand"><span>Grand Total</span><span id="grandTotal">-</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="invoice-actions">
+          <button id="paystackBtn" class="btn-pay">Pay (Paystack)</button>
+          <button id="whatsappBtn" class="btn-wa">Pay via WhatsApp</button>
+          <button id="printBtn" class="btn-print">Print</button>
+        </div>
+
+        <div class="payment-instructions">
+          <h3>What Happens Next</h3>
+          <p><strong>1. Make Payment</strong><br>
+          Complete your payment using Paystack or via direct bank transfer using the details provided.</p>
+
+          <p><strong>2. Payment Confirmation</strong><br>
+          You will receive a confirmation call within 10 minutes of payment and an email receipt after verification.</p>
+
+          <p><strong>3. Assignment of Security Personnel</strong><br>
+          We will send you the names and phone numbers of vetted security agents assigned to your request.</p>
+
+          <p><strong>4. Day-of-Service Support</strong><br>
+          Our team remains available to assist with coordination and ensure smooth service delivery.</p>
+
+          <p class="note">Please ensure your contact details are correct to avoid delays.</p>
+        </div>
+
+        <div class="footer" id="footerInfo"></div>
+      </section>
+    </div>
+  </main>
+    <div data-include="footer.html"></div>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="scripts/pay.js" defer></script>
+
+</body>
+</html>

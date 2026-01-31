@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safer.ng | Nigeria is Unsafe. Let's Change That Together.</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles/landing.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"  rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+
+</head>
+<body>
+  <div data-include="nav.html"></div>
+
+  <main>
+    <section class="hero" id="incidents">
+      
+      <div class="hero__visual">     
+       
+         
+            <div id="nigeriaMap" aria-label="Nigeria map with incident markers"></div>
+
+          
+           <div class="hero__text">
+              <p class="eyebrow">Safer – Stay Safe, Stay in the loop</p>
+              <h1>Nigeria is Unsafe. Let’s Change That Together.</h1>
+              <p class="subhead">Real-time incident reports, community alerts, and access to trusted security agents—all in one place.</p>
+              <div class="hero__actions">
+              <a class="btn btn--primary" href="report.html">Report an Incident</a>
+              <a class="btn btn--outline" href="scripts/agent-request.html">Request Security Personnel</a>
+            </div>
+         
+    </div> 
+
+    </section>
+
+    <section class="stats" id="near-you">
+      <div class="stats__header">
+        <h2>Real numbers. Real people. Real urgency.</h2>
+      </div>
+      <div class="stats__grid">
+        <div class="stat-card">
+          <p class="stat-label">Incidents reported</p>
+          <p class="stat-value" data-target="12841">0</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Communities affected</p>
+          <p class="stat-value" data-target="742">0</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Victims impacted</p>
+          <p class="stat-value" data-target="21290">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="safety-kit">
+      <div class="features__header">
+        <h2>Everything you need to stay safe and informed.</h2>
+      </div>
+      <div class="features__grid">
+        <div class="feature">
+          <div class="feature__icon">📱</div>
+          <h3>Report Incidents Instantly</h3>
+          <p>Share what's happening around you with photos, videos, and location—no account needed.</p>
+          <a class="btn btn--primary btn--small" href="report.html">Report Now</a>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🗺️</div>
+          <h3>See Danger Around You</h3>
+          <p>View real-time incidents happening in your street, your LGA, and across Nigeria.</p>
+          <a class="btn btn--secondary btn--small" href="#near-you">View Map</a>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🛡️</div>
+          <h3>Request Trusted Security Agents</h3>
+          <p>Hire vetted, reliable security professionals for events, travel, emergencies, and protection.</p>
+          <a class="btn btn--outline btn--small" href="scripts/agent-request.html">Request Security</a>
+        </div>
+        
+        <div class="feature">
+          <div class="feature__icon">📧</div>
+          <h3>Weekly Summary to Your Inbox</h3>
+          <p>Get a concise summary of incidents from the last seven days delivered straight to your email.</p>
+          <a class="btn btn--primary btn--small" href="mailto:subscribe@safer.ng?subject=Weekly%20Incident%20Summary">Get Weekly Summary</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- <section class="community" id="community">
+      <div class="community__inner">
+        <h2>Our Community</h2>
+        <p class="community__desc">Neighbourhood reports, shared tips, and local safety updates from everyday people.</p>
+       
+      </div>
+    </section> -->
+
+    <section class="cta" id="request-security">
+      <div class="cta__header">
+        <h2>Join Our Safety Community</h2>
+      </div>
+      <div class="cta__content">
+       
+        <div class="cta__text">
+          <p>Get alerts, updates, and safety tips directly on your WhatsApp and Email.</p>
+          
+          <img src="assets/community-index.png" alt="Community snapshot" class="community__image" style="max-width:320px;width:100%;height:auto;border-radius:8px;object-fit:cover;display:block;margin:0 auto;box-shadow:0 6px 18px rgba(11,114,185,0.18);" />
+
+        </div>
+        
+        <div class="community__visual">
+          
+            <form id="whatsappForm" class="cta__form">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input id="name" name="name" type="text" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number (optional)</label>
+                <input id="phone" name="phone" type="tel" placeholder="+234 810 000 0000">
+              </div>
+              <button type="submit" class="btn btn--primary full-width">Join Now</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <div data-include="footer.html"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/landing.js" defer></script>
+  <script src="scripts/map.js" defer></script>
+  <script src="scripts/include-fragments.js" defer></script>
+  <script src="scripts/whatsapp.js" defer></script>
+  <!-- Floating Report Incident Button -->
+  <a href="report.html" class="floating-report-btn" id="reportBtnIndex" aria-label="Report an incident">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 9v4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M12 17h.01" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <span>Report Incident</span>
+  </a>
+</body>
+</html>
+

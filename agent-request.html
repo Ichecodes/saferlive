@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Request Security Agent</title>
+  <link rel="stylesheet" href="styles/incidents.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <style>
+    /* Small, page-specific form adjustments that use the app variables */
+    .form-card{
+      max-width:760px;
+      margin:28px auto;
+      padding:18px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius-sm);
+    }
+    .field{display:flex;flex-direction:column;margin-bottom:12px}
+    label{font-weight:700;margin-bottom:6px;color:var(--muted)}
+    input,select{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--fg)}
+    /* Make important dropdowns clearly readable on light backgrounds */
+    .visible-select{background:#fff;color:#000;border-color:rgba(0,0,0,0.08);}
+    .visible-select option{color:#000}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .note{color:var(--muted);font-size:13px}
+    .actions{text-align:right;margin-top:12px}
+    /* Use the app's button variants */
+    .btn { padding:10px 14px; border-radius:10px; font-weight:700 }
+    .result{margin-top:12px;padding:12px;border-radius:10px;background:rgba(6,156,86,0.08);border:1px solid rgba(6,156,86,0.18);color:var(--fg)}
+    @media(max-width:720px){.row{grid-template-columns:1fr}}
+    /* Center the page title on this request form page */
+    .page-title{ text-align:center; margin:18px 0; }
+  </style>
+</head>
+ <div data-include="nav.html"></div>
+<body>
+ 
+
+  <main class="incidents-page">
+    <h1 class="page-title">Request an Agent</h1>
+
+    <form id="agentForm" class="form-card">
+      <div class="field">
+        <label for="full_name">Full name</label>
+        <input id="full_name" name="full_name" required>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" required>
+        </div>
+        <div class="field">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="agent_type">Agent type</label>
+          <select id="agent_type" name="agent_type" class="visible-select" required>
+            <option value="">Select agent type</option>
+            <option value="bouncers">Bouncers</option>
+            <option value="security">Security</option>
+            <option value="police">Police</option>
+            <option value="nscdc">NSCDC</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="job_type">Job type</label>
+          <select id="job_type" name="job_type" class="visible-select" required>
+            <option value="">Select job type</option>
+            <option value="event">Event</option>
+            <option value="trip">Trip</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state" name="state" class="visible-select" required>
+            <option value="">Select state</option>
+            <!-- Add state options or populate client-side -->
+          </select>
+        </div>
+        <div class="field">
+          <label for="lga">LGA</label>
+          <select id="lga" name="lga" class="visible-select" required>
+            <option value="">Select LGA</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="address">Address / venue</label>
+        <input id="address" name="address" placeholder="Address, venue or brief location" required>
+      </div>
+
+      <!-- Request Details: job details, counts, duration, modifiers -->
+      <hr style="border:0;border-top:1px solid var(--border);margin:18px 0">
+      <h3 style="margin:8px 0;color:var(--muted);font-size:16px">Request Details</h3>
+
+      <div class="field">
+        <label for="job_details">Job details (short description)</label>
+        <textarea id="job_details" name="job_details" rows="3" placeholder="Brief description of the assignment (max 255 chars)"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="number_of_agents">Number of agents</label>
+          <input id="number_of_agents" name="number_of_agents" type="number" min="1" value="1" required>
+        </div>
+        <div class="field">
+          <label for="number_of_days">Number of days</label>
+          <input id="number_of_days" name="number_of_days" type="number" min="1" value="1" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label><input type="checkbox" id="inter_city" name="inter_city"> Inter-city assignment (extra fee)</label>
+        </div>
+        <div class="field">
+          <label><input type="checkbox" id="foreign_national" name="foreign_national"> Foreign national on site (extra fee)</label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <label style="display:inline-flex;align-items:center;gap:10px;">
+          <input type="checkbox" id="agree" required>
+          <span style="font-size:13px;color:var(--muted)">I agree to the <a href="/terms.html" target="_blank">Terms &amp; Conditions</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a></span>
+        </label>
+        <br>
+        <button type="submit" id="submitBtn" class="btn btn--primary" style="margin-top:12px">Submit request</button>
+      </div>
+
+      <div id="response" class="result" hidden></div>
+    </form>
+  </main>
+    <div data-include="footer.html"></div>
+
+  <script src="scripts/agent-req.js" defer></script>
+  <script src="scripts/include-fragments.js" defer></script>
+</body>
+</html>
