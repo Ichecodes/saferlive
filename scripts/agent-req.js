@@ -68,16 +68,16 @@ async function handleSubmit(e){
 
   try{
     // Post directly to the jobs create endpoint; it will return calculated_price in the response
-    const resp = await postJson('/safer/api/jobs/create-job.php', data);
+    const resp = await postJson('api/jobs/create-job.php', data);
     const json = await resp.json();
     if(!resp.ok || !json.success){ showMessage(json.error || 'Unable to create request', false); }
     else{
       const currency = json.currency || 'NGN';
       const price = json.calculated_price !== undefined ? `${currency} ${json.calculated_price.toLocaleString()}` : null;
-      showMessage('Request submitted — ID: ' + json.request_id + (price ? ' — Total: ' + price : ''), true);
+      showMessage('Request submitted - ID: ' + json.request_id + (price ? ' - Total: ' + price : ''), true);
       e.target.reset();
-       // ✅ Redirect to payment/invoice page WITH job_id
-  window.location.href = `/safer/pay.html?job_id=${json.request_id}`;
+      // Redirect to payment/invoice page with job_id
+      window.location.href = `pay.html?job_id=${json.request_id}`;
     }
   }catch(err){ showMessage('Network error', false); }
   finally{ if(btn) btn.disabled=false; }
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Load locations for state/lga dropdowns (reuses locations.json)
   async function loadLocations(){
     try{
-      const resp = await fetch('/safer/locations.json');
+      const resp = await fetch('locations.json');
       if(!resp.ok) return;
       const locations = await resp.json();
       const stateSel = el('state');
