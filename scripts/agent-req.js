@@ -87,7 +87,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Load locations for state/lga dropdowns (reuses locations.json)
   async function loadLocations(){
     try{
-      const resp = await fetch('locations.json');
+      // Resolve locations.json relative to the current page path so the
+      // dropdown works whether the app is mounted at root or a subpath.
+      let base = location.pathname.substring(0, location.pathname.lastIndexOf('/'));
+      if (!base) base = '';
+      const url = (base === '') ? '/locations.json' : base + '/locations.json';
+      const resp = await fetch(url);
       if(!resp.ok) return;
       const locations = await resp.json();
       const stateSel = el('state');
