@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-  const BASE = location.pathname.includes('/safer/') ? '/safer' : ''
+  
 
   function qs(sel){return document.querySelector(sel)}
   function q(id){return document.getElementById(id)}
@@ -28,7 +28,7 @@
     if(!jobId){ qs('#invoiceRoot').innerHTML = '<p>No job_id provided in query string.</p>'; return; }
 
     try{
-      const resp = await fetchJson(`${BASE}/api/pay.php?job_id=` + encodeURIComponent(jobId));
+      const resp = await fetchJson(`api/pay.php?job_id=${encodeURIComponent(jobId)}`);
       if(!resp.success) throw new Error(resp.error || 'Unable to load');
       const job = resp.data;
       const currency = job.currency || 'NGN';
@@ -44,7 +44,7 @@
 
       // load invoice settings
       let invoiceCfg = { bank: {}, contact: {}, paystack_public_key: '', whatsapp_number: '' };
-      try{ invoiceCfg = await fetchJson(`${BASE}/scripts/invoice.json`); }catch(e){}
+      try{ invoiceCfg = await fetchJson(`scripts/invoice.json`); }catch(e){}
       q('bankName').textContent = invoiceCfg.bank?.name || '';
       q('bankAccount').textContent = invoiceCfg.bank?.account_number || '';
       q('bankAccountName').textContent = invoiceCfg.bank?.account_name || '';
@@ -145,7 +145,7 @@
         paystackBtn.addEventListener('click', async ()=>{
           try{
             // Initialize payment on server which returns amount in kobo and public key
-            const init = await fetchJson(`${BASE}/api/pay-init.php?job_id=` + encodeURIComponent(job.id));
+            const init = await fetchJson(`api/pay-init.php?job_id=${encodeURIComponent(job.id)}`);
             if(!init.success) throw new Error(init.error || 'Unable to initialize payment');
             const pk = init.paystack_public_key || invoiceCfg.paystack_public_key;
             const amount = init.amount_kobo; // in kobo
@@ -164,7 +164,7 @@
               },
               callback: function(response){
                 // On success, redirect to server verify endpoint
-                window.location = `${BASE}/api/pay-verify.php?job_id=` + encodeURIComponent(job.id) + '&reference=' + encodeURIComponent(response.reference);
+                window.location = `api/pay-verify.php?job_id=${encodeURIComponent(job.id)}&reference=${encodeURIComponent(response.reference)}`;
               },
               onClose: function(){
                 alert('Payment window closed');
