@@ -10,9 +10,9 @@ function getDatabaseConnection() {
     if ($db === null) {
         // Allow overriding via environment variables for flexibility on different hosts
         $host = getenv('DB_HOST') ?: 'localhost';
-        $dbname = getenv('DB_NAME') ?: 'lyrivers_safer_ng';
-        $username = getenv('DB_USER') ?: 'lyrivers_admin';
-        $password = getenv('DB_PASS') ?: '987Safer.ng#';
+        $dbname = getenv('DB_NAME') ?: 'safer_ng';
+        $username = getenv('DB_USER') ?: 'root';
+        $password = getenv('DB_PASS') ?: '';
 
         $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
 

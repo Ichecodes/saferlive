@@ -15,6 +15,17 @@ if (file_exists(dirname(__DIR__, 2) . '/error_logger.php')) {
 
 use Cloudinary\Cloudinary;
 
+function envOrServer(string $key, string $default = ''): string {
+    $value = getenv($key);
+    if ($value !== false && $value !== null && $value !== '') {
+        return (string) $value;
+    }
+    if (isset($_SERVER[$key]) && (string) $_SERVER[$key] !== '') {
+        return (string) $_SERVER[$key];
+    }
+    return $default;
+}
+
 function respond(array $data, int $status = 200): void {
     http_response_code($status);
     echo json_encode($data);
@@ -70,11 +81,18 @@ try {
         $incidentId = (int)$_POST['incident_id'];
         $files = $_FILES['photos'];
 
+        $cloudName = envOrServer('CLOUDINARY_CLOUD_NAME');
+        $apiKey = envOrServer('CLOUDINARY_API_KEY');
+        $apiSecret = envOrServer('CLOUDINARY_API_SECRET');
+        if ($cloudName === '' || $apiKey === '' || $apiSecret === '') {
+            respond(['success' => false, 'error' => 'Cloudinary not configured'], 500);
+        }
+
         $cloudinary = new Cloudinary([
             'cloud' => [
-                'cloud_name' => 'dphdvbdwg',
-                'api_key'    => '578132374856611',
-                'api_secret' => 'HwtzajSrqai4h5iV0jatHo0XyBI'
+                'cloud_name' => $cloudName,
+                'api_key'    => $apiKey,
+                'api_secret' => $apiSecret
             ]
         ]);
 

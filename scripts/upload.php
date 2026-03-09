@@ -1,8 +1,19 @@
 <?php
 declare(strict_types=1);
 // Single-file uploader: serves HTML form and handles POST uploads to Cloudinary
- require_once dirname(__DIR__, 1) . '/vendor/autoload.php';
+require_once dirname(__DIR__, 1) . '/vendor/autoload.php';
     use Cloudinary\Cloudinary;
+
+function envOrServer(string $key, string $default = ''): string {
+    $value = getenv($key);
+    if ($value !== false && $value !== null && $value !== '') {
+        return (string) $value;
+    }
+    if (isset($_SERVER[$key]) && (string) $_SERVER[$key] !== '') {
+        return (string) $_SERVER[$key];
+    }
+    return $default;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json; charset=utf-8');
@@ -18,14 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Cloudinary credentials copied from existing code
-     $cloudinary = new Cloudinary([
-    'cloud' => [
-      'cloud_name' => 'dphdvbdwg',
-      'api_key' => '578132374856611',
-      'api_secret' => 'HwtzajSrqai4h5iV0jatHo0XyBI'
-    ]
-  ]);
+    $cloudName = envOrServer('CLOUDINARY_CLOUD_NAME');
+    $apiKey = envOrServer('CLOUDINARY_API_KEY');
+    $apiSecret = envOrServer('CLOUDINARY_API_SECRET');
+    if ($cloudName === '' || $apiKey === '' || $apiSecret === '') {
+        echo json_encode(['success' => false, 'error' => 'Cloudinary not configured']);
+        exit;
+    }
+
+    $cloudinary = new Cloudinary([
+      'cloud' => [
+        'cloud_name' => $cloudName,
+        'api_key' => $apiKey,
+        'api_secret' => $apiSecret
+      ]
+    ]);
 
     // Attempt to get DB connection for saving metadata (optional)
     $db = null;

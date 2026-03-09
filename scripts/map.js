@@ -1,5 +1,5 @@
 // Mapbox incidents map: initialize mapbox and fetch incidents data
-const MAPBOX_TOKEN = window.MAPBOX_TOKEN || 'pk.eyJ1IjoiYXFxdXRlIiwiYSI6ImNtajVlbXc5NDFvbWszZnF3ZjJrcTNiYXIifQ.4GZMU25Dj9NJV6D_U6XHCg';
+const MAPBOX_TOKEN = window.MAPBOX_TOKEN || '';
 mapboxgl.accessToken = MAPBOX_TOKEN;
 
 let incidentMap = null;
@@ -72,6 +72,10 @@ function addOrUpdateIncidentSource(incidents) {
 function initIncidentMap() {
   const mapContainer = document.getElementById('incidentMap');
   if (!mapContainer) return;
+  if (!MAPBOX_TOKEN) {
+    mapContainer.textContent = 'Map unavailable: MAPBOX token is not configured.';
+    return;
+  }
 
   incidentMap = new mapboxgl.Map({
     container: 'incidentMap',
