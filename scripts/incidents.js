@@ -570,6 +570,6 @@ function updatePagination(pagination) {
 
 // View incident (placeholder)
 function viewIncident(id) {
-  window.location.href = `/incident-detail.html?id=${id}`;
+  window.location.href = `incident-detail.html?id=${id}`;
 }
 

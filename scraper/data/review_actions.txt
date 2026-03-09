@@ -1,0 +1,5 @@
+{"candidate_id":"cand_617d50cee3d846fb","action":"approved","target_incident_id":28,"review_note":"watching zulum","reviewed_at":"2026-03-08T07:57:48+01:00"}
+{"candidate_id":"cand_6beb74762278577d","action":"rejected","target_incident_id":null,"review_note":"","reviewed_at":"2026-03-08T07:58:16+01:00"}
+{"candidate_id":"cand_793564bb4b39573d","action":"approved","target_incident_id":29,"review_note":"","reviewed_at":"2026-03-08T08:21:04+01:00"}
+{"candidate_id":"cand_54c47d674bc4d934","action":"approved","target_incident_id":30,"review_note":"","reviewed_at":"2026-03-08T08:36:56+01:00"}
+{"candidate_id":"cand_9f9453f4bfeb989e","action":"approved","target_incident_id":31,"review_note":"","reviewed_at":"2026-03-08T09:12:32+01:00"}

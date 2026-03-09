@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Candidate Review - Safer.ng Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../styles/forms.css">
+</head>
+<body>
+  <header class="admin-header centered">
+    <h1>Candidate Review</h1>
+  </header>
+
+  <main class="admin-main">
+    <section class="summary-grid" id="summaryCards">
+      <article class="summary-card">
+        <h3>Pending Candidates</h3>
+        <p id="count-new">0</p>
+      </article>
+      <article class="summary-card">
+        <h3>Approved</h3>
+        <p id="count-approved">0</p>
+      </article>
+      <article class="summary-card">
+        <h3>Rejected</h3>
+        <p id="count-rejected">0</p>
+      </article>
+      <article class="summary-card">
+        <h3>Duplicates</h3>
+        <p id="count-duplicate">0</p>
+      </article>
+    </section>
+
+    <section class="table-card">
+      <div id="flashMessage" class="flash-message hidden"></div>
+      <table id="candidatesTable">
+        <thead>
+          <tr>
+            <th>S/N</th>
+            <th>Candidate ID</th>
+            <th>Score</th>
+            <th>Incident Type</th>
+            <th>Title</th>
+            <th>Source</th>
+            <th>Posted</th>
+            <th>Matched Places</th>
+            <th>Source URL</th>
+            <th>Current Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="approveModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <h2 style="margin-top:0;">Approve Candidate</h2>
+      <p class="helper" style="margin-top:0;">Choose State and LGA using the incident reporting location list.</p>
+
+      <form id="approveModalForm" method="post" action="promote.php">
+        <input type="hidden" name="candidate_id" id="approveCandidateId" value="">
+        <input type="hidden" name="review_note" value="">
+        <input type="hidden" name="latitude_override" id="approveLatitude" value="9.082">
+        <input type="hidden" name="longitude_override" id="approveLongitude" value="8.6753">
+
+        <div class="grid" style="margin-top:8px;">
+          <label class="field">
+            <span class="label">State</span>
+            <select name="state_override" id="approveState" required>
+              <option value="">Select state</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="label">LGA</span>
+            <select name="lga_override" id="approveLga" required>
+              <option value="">Select state first</option>
+            </select>
+          </label>
+        </div>
+
+        <p id="approveCoordPreview" class="helper" style="margin-top:8px;">Default coordinates: 9.082, 8.6753 (fallback)</p>
+
+        <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px;">
+          <button type="button" id="approveCancel" class="btn btn--ghost">Cancel</button>
+          <button type="submit" class="btn btn--success">Approve &amp; Promote</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="candidates.js" defer></script>
+</body>
+</html>

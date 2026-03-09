@@ -1,5 +1,9 @@
 (function () {
   'use strict';
+  // Use relative API base so it works on both:
+  // - /incident-detail.html -> /api/incidents
+  // - /safer/incident-detail.html -> /safer/api/incidents
+  const API_BASE = 'api/incidents';
 
   function qs(name) {
     return new URLSearchParams(window.location.search).get(name);
@@ -150,7 +154,7 @@
     nextBtn.onclick = null;
 
     try {
-      const resp = await fetch(`/safer/api/incidents/neighbor.php?id=${encodeURIComponent(currentId)}`);
+      const resp = await fetch(`${API_BASE}/neighbor.php?id=${encodeURIComponent(currentId)}`);
       if (!resp.ok) throw new Error('Request failed');
       const json = await resp.json();
       if (!json.success || !json.data) throw new Error('Invalid response');
@@ -204,7 +208,11 @@
     showLoading();
 
     try {
-      const resp = await fetch(`/api/incidents/incident-detail.php?id=${encodeURIComponent(id)}`);
+      const resp = await fetch(`${API_BASE}/incident-detail.php?id=${encodeURIComponent(id)}`);
+      if (resp.status === 404) {
+        showError('Incident not found');
+        return;
+      }
       if (!resp.ok) throw new Error('Request failed');
 
       const json = await resp.json();

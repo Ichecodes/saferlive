@@ -29,15 +29,34 @@ $incidentId = (int)$id;
 try {
 	$db = getDatabaseConnection();
 
-	$stmt = $db->prepare('
-  SELECT id, title, type, status, description, state, lga,
-         latitude, longitude, start_time, end_time,
-         victims, casualties, missing, injured, created_at
+	// Schema-tolerant select: if a column is missing in incidents, return NULL AS column.
+	$colsStmt = $db->prepare("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'incidents'");
+	$colsStmt->execute();
+	$existingCols = $colsStmt->fetchAll(PDO::FETCH_COLUMN);
+	$existingMap = array_flip($existingCols ?: []);
+
+	$desired = [
+		'id', 'title', 'type', 'category', 'status', 'description', 'state', 'lga',
+		'latitude', 'longitude', 'start_time', 'end_time',
+		'victims', 'casualties', 'missing', 'injured', 'created_at'
+	];
+	$selectParts = [];
+	foreach ($desired as $col) {
+		if (isset($existingMap[$col])) {
+			$selectParts[] = $col;
+		} else {
+			$selectParts[] = "NULL AS {$col}";
+		}
+	}
+	$selectList = implode(', ', $selectParts);
+
+	$stmt = $db->prepare("
+  SELECT {$selectList}
   FROM incidents
   WHERE id = :id
   LIMIT 1
-');
-$stmt->bindValue(':id', $incidentId, PDO::PARAM_INT);
+");
+	$stmt->bindValue(':id', $incidentId, PDO::PARAM_INT);
 	$stmt->execute();
 	$incident = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -75,6 +94,7 @@ $stmt->bindValue(':id', $incidentId, PDO::PARAM_INT);
     'id' => (int)$incident['id'],
     'title' => $incident['title'] ?? null,
     'type' => $incident['type'] ?? null,
+    'category' => $incident['category'] ?? null,
     'status' => $incident['status'] ?? null,
     'description' => $incident['description'] ?? null,
     'state' => $incident['state'] ?? null,

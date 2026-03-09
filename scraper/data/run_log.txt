@@ -1,0 +1,485 @@
+[2026-03-06T11:55:48+01:00] Run start
+[2026-03-06T11:55:48+01:00] Processing source: Punch
+[2026-03-06T11:55:48+01:00] Listing fetch failed: https://punchng.com/topics/news/ (Failed to connect to punchng.com port 443 after 64 ms: Couldn't connect to server)
+[2026-03-06T11:55:48+01:00] Listing fetch failed: https://punchng.com/topics/metro-plus/ (Failed to connect to punchng.com port 443 after 3 ms: Couldn't connect to server)
+[2026-03-06T11:55:48+01:00] Processing source: Vanguard
+[2026-03-06T11:55:48+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (Failed to connect to www.vanguardngr.com port 443 after 42 ms: Couldn't connect to server)
+[2026-03-06T11:55:48+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (Failed to connect to www.vanguardngr.com port 443 after 3 ms: Couldn't connect to server)
+[2026-03-06T11:55:48+01:00] Processing source: Premium Times
+[2026-03-06T11:55:48+01:00] Listing fetch failed: https://www.premiumtimesng.com/news/headlines (Failed to connect to www.premiumtimesng.com port 443 after 26 ms: Couldn't connect to server)
+[2026-03-06T11:55:48+01:00] Listing fetch failed: https://www.premiumtimesng.com/news/top-news (Failed to connect to www.premiumtimesng.com port 443 after 4 ms: Couldn't connect to server)
+[2026-03-06T11:55:48+01:00] Processing source: Nigerian Tribune
+[2026-03-06T11:55:49+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (Failed to connect to tribuneonlineng.com port 443 after 46 ms: Couldn't connect to server)
+[2026-03-06T11:55:49+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (Failed to connect to tribuneonlineng.com port 443 after 17 ms: Couldn't connect to server)
+[2026-03-06T11:55:49+01:00] Processing source: Daily Trust
+[2026-03-06T11:55:49+01:00] Listing fetch failed: https://dailytrust.com/category/news/ (Failed to connect to dailytrust.com port 443 after 129 ms: Couldn't connect to server)
+[2026-03-06T11:55:49+01:00] Listing fetch failed: https://dailytrust.com/category/metro/ (Failed to connect to dailytrust.com port 443 after 3 ms: Couldn't connect to server)
+[2026-03-06T11:55:49+01:00] Run end | raw_saved=0, candidates_saved=0, duplicates_skipped=0, errors=10
+[2026-03-06T12:09:55+01:00] Run start
+[2026-03-06T12:09:55+01:00] Processing source: Punch
+[2026-03-06T12:09:57+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-06T12:09:57+01:00] Links found from listing: 1
+[2026-03-06T12:09:59+01:00] Listing fetched: https://punchng.com/topics/metro-plus/
+[2026-03-06T12:09:59+01:00] Links found from listing: 1
+[2026-03-06T12:10:01+01:00] Raw item saved: https://punchng.com/topics/news/
+[2026-03-06T12:10:01+01:00] Candidate saved: https://punchng.com/topics/news/ (score: 100)
+[2026-03-06T12:10:01+01:00] Processing source: Vanguard
+[2026-03-06T12:10:03+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-06T12:10:08+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-06T12:10:08+01:00] Processing source: Premium Times
+[2026-03-06T12:10:11+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-06T12:10:11+01:00] Links found from listing: 27
+[2026-03-06T12:10:19+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-06T12:10:19+01:00] Links found from listing: 37
+[2026-03-06T12:10:22+01:00] Skipped non-English article: https://www.premiumtimesng.com/category/news/headlines
+[2026-03-06T12:10:24+01:00] Raw item saved: https://www.premiumtimesng.com/category/news/top-news
+[2026-03-06T12:10:24+01:00] Candidate saved: https://www.premiumtimesng.com/category/news/top-news (score: 100)
+[2026-03-06T12:10:26+01:00] Skipped non-English article: https://www.premiumtimesng.com/category/news/more-news
+[2026-03-06T12:10:28+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/859477-akwa-iboms-paradox-luxury-suvs-for-ex-officials-while-pupils-sit-on-floors.html
+[2026-03-06T12:10:28+01:00] Candidate saved: https://www.premiumtimesng.com/news/headlines/859477-akwa-iboms-paradox-luxury-suvs-for-ex-officials-while-pupils-sit-on-floors.html (score: 95)
+[2026-03-06T12:10:31+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/858816-special-report-how-gas-flaring-turns-akwa-iboms-oil-communities-into-a-furnace.html
+[2026-03-06T12:10:31+01:00] Candidate saved: https://www.premiumtimesng.com/news/headlines/858816-special-report-how-gas-flaring-turns-akwa-iboms-oil-communities-into-a-furnace.html (score: 69)
+[2026-03-06T12:10:33+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/857939-special-report-edos-n14-15-billion-extra-budgetary-spending-raises-questions-about-fiscal-discipline-under-okpebholo.html
+[2026-03-06T12:10:36+01:00] Raw item saved: https://www.premiumtimesng.com/regional/north-central/855110-special-report-abuja-residents-bear-the-brunt-of-poorly-regulated-quarrying-companies.html
+[2026-03-06T12:10:36+01:00] Candidate saved: https://www.premiumtimesng.com/regional/north-central/855110-special-report-abuja-residents-bear-the-brunt-of-poorly-regulated-quarrying-companies.html (score: 71)
+[2026-03-06T12:10:41+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/854890-special-report-oil-spills-from-abandoned-wells-ravage-ogoniland-amidst-plans-to-resume-production.html
+[2026-03-06T12:10:41+01:00] Candidate saved: https://www.premiumtimesng.com/news/headlines/854890-special-report-oil-spills-from-abandoned-wells-ravage-ogoniland-amidst-plans-to-resume-production.html (score: 91)
+[2026-03-06T12:10:43+01:00] Article fetch failed: https://media.premiumtimesng.com/wp-content/files/2026/03/Dangote-Refinery-Reaffirms-Commitment-to-National-Energy-Stability-Amid-Global-Market-Volatility.jpeg (Non-HTML response)
+[2026-03-06T12:10:46+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/861881-us-israel-iran-war-day-7-death-toll-rises-as-sri-lanka-rescues-iranian-sailors.html
+[2026-03-06T12:10:46+01:00] Processing source: Nigerian Tribune
+[2026-03-06T12:10:47+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-06T12:10:48+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-06T12:10:48+01:00] Processing source: Daily Trust
+[2026-03-06T12:10:50+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-06T12:10:50+01:00] Links found from listing: 0
+[2026-03-06T12:10:52+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-06T12:10:52+01:00] Links found from listing: 1
+[2026-03-06T12:10:53+01:00] Raw item saved: https://dailytrust.com/just-in-ukrainians-take-cover-in-metro-stations-as-russian-forces-approach-capital-city/metro/tel:+2347001777577
+[2026-03-06T12:10:53+01:00] Candidate saved: https://dailytrust.com/just-in-ukrainians-take-cover-in-metro-stations-as-russian-forces-approach-capital-city/metro/tel:+2347001777577 (score: 100)
+[2026-03-06T12:10:53+01:00] Run end | raw_saved=9, candidates_saved=7, duplicates_skipped=0, errors=5
+[2026-03-06T12:19:18+01:00] Run start
+[2026-03-06T12:19:18+01:00] Processing source: Punch
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://punchng.com/topics/news/ (Failed to connect to punchng.com port 443 after 64 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://punchng.com/topics/metro-plus/ (Failed to connect to punchng.com port 443 after 2 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Processing source: Vanguard
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (Failed to connect to www.vanguardngr.com port 443 after 23 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (Failed to connect to www.vanguardngr.com port 443 after 2 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Processing source: Premium Times
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://www.premiumtimesng.com/news/headlines (Failed to connect to www.premiumtimesng.com port 443 after 13 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://www.premiumtimesng.com/news/top-news (Failed to connect to www.premiumtimesng.com port 443 after 27 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Processing source: Nigerian Tribune
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (Failed to connect to tribuneonlineng.com port 443 after 28 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (Failed to connect to tribuneonlineng.com port 443 after 2 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Processing source: Daily Trust
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://dailytrust.com/category/news/ (Failed to connect to dailytrust.com port 443 after 19 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Listing fetch failed: https://dailytrust.com/category/metro/ (Failed to connect to dailytrust.com port 443 after 2 ms: Couldn't connect to server)
+[2026-03-06T12:19:18+01:00] Run end | raw_saved=0, candidates_saved=0, duplicates_skipped=0, errors=10
+[2026-03-06T14:12:36+01:00] Run start
+[2026-03-06T14:12:36+01:00] Processing source: Punch
+[2026-03-06T14:12:39+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-06T14:12:39+01:00] Links found from listing: 1
+[2026-03-06T14:12:41+01:00] Listing fetched: https://punchng.com/topics/metro-plus/
+[2026-03-06T14:12:41+01:00] Links found from listing: 1
+[2026-03-06T14:12:41+01:00] Skipped seen URL: https://punchng.com/topics/news/
+[2026-03-06T14:12:41+01:00] Processing source: Vanguard
+[2026-03-06T14:12:42+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-06T14:12:43+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-06T14:12:43+01:00] Processing source: Premium Times
+[2026-03-06T14:12:48+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-06T14:12:48+01:00] Links found from listing: 27
+[2026-03-06T14:12:51+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-06T14:12:51+01:00] Links found from listing: 37
+[2026-03-06T14:12:53+01:00] Skipped non-English article: https://www.premiumtimesng.com/category/news/headlines
+[2026-03-06T14:12:53+01:00] Skipped seen URL: https://www.premiumtimesng.com/category/news/top-news
+[2026-03-06T14:12:56+01:00] Skipped non-English article: https://www.premiumtimesng.com/category/news/more-news
+[2026-03-06T14:12:56+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/859477-akwa-iboms-paradox-luxury-suvs-for-ex-officials-while-pupils-sit-on-floors.html
+[2026-03-06T14:12:56+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/858816-special-report-how-gas-flaring-turns-akwa-iboms-oil-communities-into-a-furnace.html
+[2026-03-06T14:12:56+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/857939-special-report-edos-n14-15-billion-extra-budgetary-spending-raises-questions-about-fiscal-discipline-under-okpebholo.html
+[2026-03-06T14:12:56+01:00] Skipped seen URL: https://www.premiumtimesng.com/regional/north-central/855110-special-report-abuja-residents-bear-the-brunt-of-poorly-regulated-quarrying-companies.html
+[2026-03-06T14:12:56+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/854890-special-report-oil-spills-from-abandoned-wells-ravage-ogoniland-amidst-plans-to-resume-production.html
+[2026-03-06T14:12:58+01:00] Article fetch failed: https://media.premiumtimesng.com/wp-content/files/2026/03/Dangote-Refinery-Reaffirms-Commitment-to-National-Energy-Stability-Amid-Global-Market-Volatility.jpeg (Non-HTML response)
+[2026-03-06T14:12:58+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/861881-us-israel-iran-war-day-7-death-toll-rises-as-sri-lanka-rescues-iranian-sailors.html
+[2026-03-06T14:12:58+01:00] Processing source: Nigerian Tribune
+[2026-03-06T14:12:59+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-06T14:13:00+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-06T14:13:00+01:00] Processing source: Daily Trust
+[2026-03-06T14:13:01+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-06T14:13:01+01:00] Links found from listing: 0
+[2026-03-06T14:13:03+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-06T14:13:03+01:00] Links found from listing: 1
+[2026-03-06T14:13:03+01:00] Skipped seen URL: https://dailytrust.com/just-in-ukrainians-take-cover-in-metro-stations-as-russian-forces-approach-capital-city/metro/tel:+2347001777577
+[2026-03-06T14:13:03+01:00] Run end | raw_saved=0, candidates_saved=0, duplicates_skipped=9, errors=5
+[2026-03-06T14:14:54+01:00] Run start
+[2026-03-06T14:14:54+01:00] Processing source: Punch
+[2026-03-06T14:14:56+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-06T14:14:56+01:00] Links found from listing: 1
+[2026-03-06T14:14:57+01:00] Listing fetched: https://punchng.com/topics/metro-plus/
+[2026-03-06T14:14:57+01:00] Links found from listing: 1
+[2026-03-06T14:14:57+01:00] Skipped seen URL: https://punchng.com/topics/news/
+[2026-03-06T14:14:57+01:00] Processing source: Vanguard
+[2026-03-06T14:14:58+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-06T14:14:59+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-06T14:14:59+01:00] Processing source: Premium Times
+[2026-03-06T14:15:02+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-06T14:15:02+01:00] Links found from listing: 27
+[2026-03-06T14:15:04+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-06T14:15:04+01:00] Links found from listing: 37
+[2026-03-06T14:15:06+01:00] Skipped non-English article: https://www.premiumtimesng.com/category/news/headlines
+[2026-03-06T14:15:06+01:00] Skipped seen URL: https://www.premiumtimesng.com/category/news/top-news
+[2026-03-06T14:15:09+01:00] Skipped non-English article: https://www.premiumtimesng.com/category/news/more-news
+[2026-03-06T14:15:09+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/859477-akwa-iboms-paradox-luxury-suvs-for-ex-officials-while-pupils-sit-on-floors.html
+[2026-03-06T14:15:09+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/858816-special-report-how-gas-flaring-turns-akwa-iboms-oil-communities-into-a-furnace.html
+[2026-03-06T14:15:09+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/857939-special-report-edos-n14-15-billion-extra-budgetary-spending-raises-questions-about-fiscal-discipline-under-okpebholo.html
+[2026-03-06T14:15:09+01:00] Skipped seen URL: https://www.premiumtimesng.com/regional/north-central/855110-special-report-abuja-residents-bear-the-brunt-of-poorly-regulated-quarrying-companies.html
+[2026-03-06T14:15:09+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/854890-special-report-oil-spills-from-abandoned-wells-ravage-ogoniland-amidst-plans-to-resume-production.html
+[2026-03-06T14:15:12+01:00] Article fetch failed: https://media.premiumtimesng.com/wp-content/files/2026/03/Dangote-Refinery-Reaffirms-Commitment-to-National-Energy-Stability-Amid-Global-Market-Volatility.jpeg (Non-HTML response)
+[2026-03-06T14:15:12+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/861881-us-israel-iran-war-day-7-death-toll-rises-as-sri-lanka-rescues-iranian-sailors.html
+[2026-03-06T14:15:12+01:00] Processing source: Nigerian Tribune
+[2026-03-06T14:15:12+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-06T14:15:13+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-06T14:15:13+01:00] Processing source: Daily Trust
+[2026-03-06T14:15:15+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-06T14:15:15+01:00] Links found from listing: 0
+[2026-03-06T14:15:16+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-06T14:15:16+01:00] Links found from listing: 1
+[2026-03-06T14:15:16+01:00] Skipped seen URL: https://dailytrust.com/just-in-ukrainians-take-cover-in-metro-stations-as-russian-forces-approach-capital-city/metro/tel:+2347001777577
+[2026-03-06T14:15:16+01:00] Run end | raw_saved=0, candidates_saved=0, duplicates_skipped=9, errors=5
+[2026-03-06T14:56:22+01:00] Run start
+[2026-03-06T14:56:22+01:00] Processing source: Punch
+[2026-03-06T14:56:29+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-06T14:56:29+01:00] Links found from listing: 1
+[2026-03-06T14:56:37+01:00] Listing fetched: https://punchng.com/topics/metro-plus/
+[2026-03-06T14:56:37+01:00] Links found from listing: 1
+[2026-03-06T14:56:37+01:00] Skipped seen URL: https://punchng.com/topics/news/
+[2026-03-06T14:56:37+01:00] Processing source: Vanguard
+[2026-03-06T14:56:39+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-06T14:56:42+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-06T14:56:42+01:00] Processing source: Premium Times
+[2026-03-06T14:56:49+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-06T14:56:49+01:00] Links found from listing: 27
+[2026-03-06T14:56:52+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-06T14:56:53+01:00] Links found from listing: 37
+[2026-03-06T14:56:56+01:00] Raw item saved: https://www.premiumtimesng.com/category/news/headlines
+[2026-03-06T14:56:56+01:00] Skipped seen URL: https://www.premiumtimesng.com/category/news/top-news
+[2026-03-06T14:57:01+01:00] Raw item saved: https://www.premiumtimesng.com/category/news/more-news
+[2026-03-06T14:57:01+01:00] Candidate saved: https://www.premiumtimesng.com/category/news/more-news (score: 100)
+[2026-03-06T14:57:01+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/859477-akwa-iboms-paradox-luxury-suvs-for-ex-officials-while-pupils-sit-on-floors.html
+[2026-03-06T14:57:01+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/858816-special-report-how-gas-flaring-turns-akwa-iboms-oil-communities-into-a-furnace.html
+[2026-03-06T14:57:01+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/857939-special-report-edos-n14-15-billion-extra-budgetary-spending-raises-questions-about-fiscal-discipline-under-okpebholo.html
+[2026-03-06T14:57:01+01:00] Skipped seen URL: https://www.premiumtimesng.com/regional/north-central/855110-special-report-abuja-residents-bear-the-brunt-of-poorly-regulated-quarrying-companies.html
+[2026-03-06T14:57:01+01:00] Skipped seen URL: https://www.premiumtimesng.com/news/headlines/854890-special-report-oil-spills-from-abandoned-wells-ravage-ogoniland-amidst-plans-to-resume-production.html
+[2026-03-06T14:57:05+01:00] Article fetch failed: https://media.premiumtimesng.com/wp-content/files/2026/03/Dangote-Refinery-Reaffirms-Commitment-to-National-Energy-Stability-Amid-Global-Market-Volatility.jpeg (Non-HTML response)
+[2026-03-06T14:57:11+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/861920-changes-in-nigerian-police-frank-mba-other-digs-vacate-office-psc-set-to-announce-replacements.html
+[2026-03-06T14:57:11+01:00] Candidate saved: https://www.premiumtimesng.com/news/headlines/861920-changes-in-nigerian-police-frank-mba-other-digs-vacate-office-psc-set-to-announce-replacements.html (score: 67)
+[2026-03-06T14:57:11+01:00] Processing source: Nigerian Tribune
+[2026-03-06T14:57:12+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-06T14:57:14+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-06T14:57:14+01:00] Processing source: Daily Trust
+[2026-03-06T14:57:16+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-06T14:57:16+01:00] Links found from listing: 0
+[2026-03-06T14:57:18+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-06T14:57:18+01:00] Links found from listing: 1
+[2026-03-06T14:57:18+01:00] Skipped seen URL: https://dailytrust.com/just-in-ukrainians-take-cover-in-metro-stations-as-russian-forces-approach-capital-city/metro/tel:+2347001777577
+[2026-03-06T14:57:18+01:00] Run end | raw_saved=3, candidates_saved=2, duplicates_skipped=8, errors=5
+[2026-03-06T18:00:54+01:00] Run start
+[2026-03-06T18:00:54+01:00] Processing source: Punch
+[2026-03-06T18:01:06+01:00] Listing fetch failed: https://punchng.com/topics/news/ (Connection timed out after 12002 milliseconds)
+[2026-03-06T18:01:18+01:00] Listing fetch failed: https://punchng.com/topics/metro-plus/ (Connection timed out after 12004 milliseconds)
+[2026-03-06T18:01:18+01:00] Processing source: Vanguard
+[2026-03-06T18:01:30+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (Connection timed out after 12000 milliseconds)
+[2026-03-06T18:01:42+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (Connection timed out after 12005 milliseconds)
+[2026-03-06T18:01:42+01:00] Processing source: Premium Times
+[2026-03-06T18:01:54+01:00] Listing fetch failed: https://www.premiumtimesng.com/news/headlines (Connection timed out after 12008 milliseconds)
+[2026-03-06T18:02:06+01:00] Listing fetch failed: https://www.premiumtimesng.com/news/top-news (Connection timed out after 12001 milliseconds)
+[2026-03-06T18:02:06+01:00] Processing source: Nigerian Tribune
+[2026-03-06T18:02:18+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (Connection timed out after 12014 milliseconds)
+[2026-03-06T18:02:30+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (Connection timed out after 12002 milliseconds)
+[2026-03-06T18:02:30+01:00] Processing source: Daily Trust
+[2026-03-06T18:02:42+01:00] Listing fetch failed: https://dailytrust.com/category/news/ (Connection timed out after 12006 milliseconds)
+[2026-03-06T18:33:49+01:00] Run start
+[2026-03-06T18:33:49+01:00] Processing source: Punch
+[2026-03-06T18:33:54+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-06T18:33:54+01:00] Links found from listing: 1
+[2026-03-06T18:33:56+01:00] Listing fetched: https://punchng.com/topics/metro-plus/
+[2026-03-06T18:33:56+01:00] Links found from listing: 1
+[2026-03-06T18:33:58+01:00] Raw item saved: https://punchng.com/agitation-for-creation-of-more-ijaw-states-must-continue-diri/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:33:58+01:00] Candidate saved: https://punchng.com/agitation-for-creation-of-more-ijaw-states-must-continue-diri/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:33:59+01:00] Raw item saved: https://punchng.com/nddcs-projects-boost-ndelta-security-air-chief/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:33:59+01:00] Candidate saved: https://punchng.com/nddcs-projects-boost-ndelta-security-air-chief/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:34:02+01:00] Raw item saved: https://punchng.com/middle-east-war-islamic-movement-rejects-israeli-envoys-terrorism-claims/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:02+01:00] Candidate saved: https://punchng.com/middle-east-war-islamic-movement-rejects-israeli-envoys-terrorism-claims/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:34:03+01:00] Raw item saved: https://punchng.com/cubas-government-will-fall-pretty-soon-trump/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:03+01:00] Candidate saved: https://punchng.com/cubas-government-will-fall-pretty-soon-trump/?utm_source=rss.punchng.com&utm_medium=web (score: 83)
+[2026-03-06T18:34:04+01:00] Raw item saved: https://punchng.com/tinubu-sets-up-committee-for-power-grid-management/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:04+01:00] Candidate saved: https://punchng.com/tinubu-sets-up-committee-for-power-grid-management/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:34:06+01:00] Raw item saved: https://punchng.com/ogun-2027-why-i-dont-need-my-fathers-support-iyabo-obasanjo/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:06+01:00] Candidate saved: https://punchng.com/ogun-2027-why-i-dont-need-my-fathers-support-iyabo-obasanjo/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:34:08+01:00] Raw item saved: https://punchng.com/federal-high-court-announces-easter-vacation/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:08+01:00] Candidate saved: https://punchng.com/federal-high-court-announces-easter-vacation/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:34:10+01:00] Run start
+[2026-03-06T18:34:10+01:00] Processing source: Punch
+[2026-03-06T18:34:14+01:00] Raw item saved: https://punchng.com/nscdc-arrests-two-suspected-bandits-recovers-firearm-in-kwara/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:14+01:00] Candidate saved: https://punchng.com/nscdc-arrests-two-suspected-bandits-recovers-firearm-in-kwara/?utm_source=rss.punchng.com&utm_medium=web (score: 100)
+[2026-03-06T18:34:15+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-06T18:34:15+01:00] Links found from listing: 1
+[2026-03-06T18:34:16+01:00] Raw item saved: https://punchng.com/blockdag-hits-cmc-top-100-in-under-24-hours-heres-why-thats-never-happened-before/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:16+01:00] Candidate saved: https://punchng.com/blockdag-hits-cmc-top-100-in-under-24-hours-heres-why-thats-never-happened-before/?utm_source=rss.punchng.com&utm_medium=web (score: 99)
+[2026-03-06T18:34:17+01:00] Listing fetched: https://punchng.com/topics/metro-plus/
+[2026-03-06T18:34:17+01:00] Links found from listing: 1
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/agitation-for-creation-of-more-ijaw-states-must-continue-diri/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/nddcs-projects-boost-ndelta-security-air-chief/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/middle-east-war-islamic-movement-rejects-israeli-envoys-terrorism-claims/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/cubas-government-will-fall-pretty-soon-trump/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/tinubu-sets-up-committee-for-power-grid-management/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/ogun-2027-why-i-dont-need-my-fathers-support-iyabo-obasanjo/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/federal-high-court-announces-easter-vacation/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/nscdc-arrests-two-suspected-bandits-recovers-firearm-in-kwara/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:17+01:00] Skipped seen URL: https://punchng.com/blockdag-hits-cmc-top-100-in-under-24-hours-heres-why-thats-never-happened-before/?utm_source=rss.punchng.com&utm_medium=web
+[2026-03-06T18:34:20+01:00] Raw item saved: https://punchng.com/why-i-dumped-pdp-for-apc-iyabo-obasanjo/?utm_source=rss.punchng.com&utm_medium=web (source_type=rss)
+[2026-03-06T18:34:20+01:00] Candidate saved: https://punchng.com/why-i-dumped-pdp-for-apc-iyabo-obasanjo/?utm_source=rss.punchng.com&utm_medium=web (score: 89)
+[2026-03-06T18:34:20+01:00] Processing source: Vanguard
+[2026-03-06T18:34:21+01:00] RSS fetch failed: https://www.vanguardngr.com/feed (HTTP 403)
+[2026-03-06T18:34:21+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-06T18:34:22+01:00] Duplicate skipped: https://punchng.com/why-i-dumped-pdp-for-apc-iyabo-obasanjo/?utm_source=rss.punchng.com&utm_medium=web (Seen URL or exact hash)
+[2026-03-06T18:34:22+01:00] Processing source: Vanguard
+[2026-03-06T18:34:22+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-06T18:34:22+01:00] Processing source: Premium Times
+[2026-03-06T18:34:22+01:00] RSS fetch failed: https://www.vanguardngr.com/feed (HTTP 403)
+[2026-03-06T18:34:23+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-06T18:34:24+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-06T18:34:24+01:00] Processing source: Premium Times
+[2026-03-06T18:34:25+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-06T18:34:25+01:00] Links found from listing: 27
+[2026-03-06T18:34:26+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-06T18:34:26+01:00] Links found from listing: 27
+[2026-03-06T18:34:27+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-06T18:34:27+01:00] Links found from listing: 38
+[2026-03-06T18:34:27+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-06T18:34:27+01:00] Links found from listing: 38
+[2026-03-06T18:34:28+01:00] Raw item saved: https://www.premiumtimesng.com/news/more-news/861989-police-arrest-18-suspected-kidnappers-cultists-as-teen-held-for-murder-in-kwara.html (source_type=rss)
+[2026-03-06T18:34:28+01:00] Candidate saved: https://www.premiumtimesng.com/news/more-news/861989-police-arrest-18-suspected-kidnappers-cultists-as-teen-held-for-murder-in-kwara.html (score: 100)
+[2026-03-06T18:34:29+01:00] Duplicate skipped: https://www.premiumtimesng.com/news/more-news/861989-police-arrest-18-suspected-kidnappers-cultists-as-teen-held-for-murder-in-kwara.html (Seen URL or exact hash)
+[2026-03-06T18:34:29+01:00] Raw item saved: https://www.premiumtimesng.com/opinion/861985-the-classroom-on-the-floor-by-abdul-mahmud.html (source_type=rss)
+[2026-03-06T18:34:29+01:00] Candidate saved: https://www.premiumtimesng.com/opinion/861985-the-classroom-on-the-floor-by-abdul-mahmud.html (score: 100)
+[2026-03-06T18:34:30+01:00] Duplicate skipped: https://www.premiumtimesng.com/opinion/861985-the-classroom-on-the-floor-by-abdul-mahmud.html (Seen URL or exact hash)
+[2026-03-06T18:34:31+01:00] Raw item saved: https://www.premiumtimesng.com/entertainment/naija-fashion/861980-teach-your-young-girls-how-to-cover-up-being-naked-isnt-beauty-remi-tinubu.html (source_type=rss)
+[2026-03-06T18:34:32+01:00] Duplicate skipped: https://www.premiumtimesng.com/entertainment/naija-fashion/861980-teach-your-young-girls-how-to-cover-up-being-naked-isnt-beauty-remi-tinubu.html (Seen URL or exact hash)
+[2026-03-06T18:34:33+01:00] Raw item saved: https://www.premiumtimesng.com/promoted/861956-1win-and-the-nigerians-set-a-guinness-world-record-in-afrobeat-dance.html (source_type=rss)
+[2026-03-06T18:34:34+01:00] Duplicate skipped: https://www.premiumtimesng.com/promoted/861956-1win-and-the-nigerians-set-a-guinness-world-record-in-afrobeat-dance.html (Seen URL or exact hash)
+[2026-03-06T18:34:35+01:00] Raw item saved: https://www.premiumtimesng.com/news/top-news/861947-photos-iwd-food-aid-brings-a-smile-to-makoko-womens-faces.html (source_type=rss)
+[2026-03-06T18:34:36+01:00] Duplicate skipped: https://www.premiumtimesng.com/news/top-news/861947-photos-iwd-food-aid-brings-a-smile-to-makoko-womens-faces.html (Seen URL or exact hash)
+[2026-03-06T18:34:37+01:00] Raw item saved: https://www.premiumtimesng.com/news/top-news/861957-alleged-coup-families-of-detained-officers-demand-open-trial-presidential-mercy.html (source_type=rss)
+[2026-03-06T18:34:38+01:00] Duplicate skipped: https://www.premiumtimesng.com/news/top-news/861957-alleged-coup-families-of-detained-officers-demand-open-trial-presidential-mercy.html (Seen URL or exact hash)
+[2026-03-06T18:34:40+01:00] Raw item saved: https://www.premiumtimesng.com/opinion/861961-friday-sermon-a-responsible-government-must-stop-the-killings-of-its-citizens-by-murtadha-gusau.html (source_type=rss)
+[2026-03-06T18:34:40+01:00] Candidate saved: https://www.premiumtimesng.com/opinion/861961-friday-sermon-a-responsible-government-must-stop-the-killings-of-its-citizens-by-murtadha-gusau.html (score: 100)
+[2026-03-06T18:34:41+01:00] Duplicate skipped: https://www.premiumtimesng.com/opinion/861961-friday-sermon-a-responsible-government-must-stop-the-killings-of-its-citizens-by-murtadha-gusau.html (Seen URL or exact hash)
+[2026-03-06T18:34:42+01:00] Raw item saved: https://www.premiumtimesng.com/regional/ssouth-east/861948-nigerian-governor-orders-destruction-of-community-shrines-deities-gives-reason.html (source_type=rss)
+[2026-03-06T18:34:42+01:00] Candidate saved: https://www.premiumtimesng.com/regional/ssouth-east/861948-nigerian-governor-orders-destruction-of-community-shrines-deities-gives-reason.html (score: 61)
+[2026-03-06T18:34:43+01:00] Duplicate skipped: https://www.premiumtimesng.com/regional/ssouth-east/861948-nigerian-governor-orders-destruction-of-community-shrines-deities-gives-reason.html (Seen URL or exact hash)
+[2026-03-06T18:34:43+01:00] Raw item saved: https://www.premiumtimesng.com/news/top-news/861946-ngoshe-attack-group-claims-responsibility-threatens-more-attacks.html (source_type=rss)
+[2026-03-06T18:34:43+01:00] Candidate saved: https://www.premiumtimesng.com/news/top-news/861946-ngoshe-attack-group-claims-responsibility-threatens-more-attacks.html (score: 91)
+[2026-03-06T18:34:44+01:00] Duplicate skipped: https://www.premiumtimesng.com/news/top-news/861946-ngoshe-attack-group-claims-responsibility-threatens-more-attacks.html (Seen URL or exact hash)
+[2026-03-06T18:34:45+01:00] Raw item saved: https://www.premiumtimesng.com/gender/861945-oluremi-tinubu-urges-unity-as-christians-and-muslims-observe-fasting-together.html (source_type=rss)
+[2026-03-06T18:34:45+01:00] Candidate saved: https://www.premiumtimesng.com/gender/861945-oluremi-tinubu-urges-unity-as-christians-and-muslims-observe-fasting-together.html (score: 69)
+[2026-03-06T18:34:45+01:00] Processing source: Nigerian Tribune
+[2026-03-06T18:34:45+01:00] Duplicate skipped: https://www.premiumtimesng.com/gender/861945-oluremi-tinubu-urges-unity-as-christians-and-muslims-observe-fasting-together.html (Seen URL or exact hash)
+[2026-03-06T18:34:45+01:00] Processing source: Nigerian Tribune
+[2026-03-06T18:34:45+01:00] RSS fetch failed: https://tribuneonlineng.com/feed (HTTP 403)
+[2026-03-06T18:34:46+01:00] RSS fetch failed: https://tribuneonlineng.com/feed (HTTP 403)
+[2026-03-06T18:34:46+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-06T18:34:47+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-06T18:34:47+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-06T18:34:47+01:00] Processing source: Daily Trust
+[2026-03-06T18:34:48+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-06T18:34:48+01:00] Processing source: Daily Trust
+[2026-03-06T18:34:50+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-06T18:34:50+01:00] Links found from listing: 0
+[2026-03-06T18:34:50+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-06T18:34:50+01:00] Links found from listing: 0
+[2026-03-06T18:34:52+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-06T18:34:52+01:00] Links found from listing: 1
+[2026-03-06T18:34:52+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-06T18:34:52+01:00] Links found from listing: 1
+[2026-03-06T18:34:54+01:00] Raw item saved: https://dailytrust.com/suspected-bandits-nabbed-with-firearms-tramadol-in-kwara/ (source_type=rss)
+[2026-03-06T18:34:54+01:00] Candidate saved: https://dailytrust.com/suspected-bandits-nabbed-with-firearms-tramadol-in-kwara/ (score: 93)
+[2026-03-06T18:34:54+01:00] Raw item saved: https://dailytrust.com/suspected-bandits-nabbed-with-firearms-tramadol-in-kwara/ (source_type=rss)
+[2026-03-06T18:34:54+01:00] Candidate saved: https://dailytrust.com/suspected-bandits-nabbed-with-firearms-tramadol-in-kwara/ (score: 93)
+[2026-03-06T18:34:55+01:00] Raw item saved: https://dailytrust.com/one-killed-as-cult-groups-clash-at-kwara-market/ (source_type=rss)
+[2026-03-06T18:34:55+01:00] Candidate saved: https://dailytrust.com/one-killed-as-cult-groups-clash-at-kwara-market/ (score: 97)
+[2026-03-06T18:34:55+01:00] Duplicate skipped: https://dailytrust.com/one-killed-as-cult-groups-clash-at-kwara-market/ (Seen URL or exact hash)
+[2026-03-06T18:34:57+01:00] Raw item saved: https://dailytrust.com/strategic-assessment-gcc-structural-vulnerability-drone-warfare-economics-and-the-resilience-of-the-petrodollar-system/ (source_type=rss)
+[2026-03-06T18:34:57+01:00] Duplicate skipped: https://dailytrust.com/strategic-assessment-gcc-structural-vulnerability-drone-warfare-economics-and-the-resilience-of-the-petrodollar-system/ (Seen URL or exact hash)
+[2026-03-06T18:35:01+01:00] Raw item saved: https://dailytrust.com/breaking-ffk-gets-germany-omokri-mexico-as-tinubu-posts-ambassadors/ (source_type=rss)
+[2026-03-06T18:35:01+01:00] Candidate saved: https://dailytrust.com/breaking-ffk-gets-germany-omokri-mexico-as-tinubu-posts-ambassadors/ (score: 61)
+[2026-03-06T18:35:01+01:00] Raw item saved: https://dailytrust.com/breaking-ffk-gets-germany-omokri-mexico-as-tinubu-posts-ambassadors/ (source_type=rss)
+[2026-03-06T18:35:01+01:00] Candidate saved: https://dailytrust.com/breaking-ffk-gets-germany-omokri-mexico-as-tinubu-posts-ambassadors/ (score: 61)
+[2026-03-06T18:35:03+01:00] Raw item saved: https://dailytrust.com/boko-haram-brags-about-killing-soldiers-vows-to-turn-borno-community-to-caliphate/ (source_type=rss)
+[2026-03-06T18:35:03+01:00] Candidate saved: https://dailytrust.com/boko-haram-brags-about-killing-soldiers-vows-to-turn-borno-community-to-caliphate/ (score: 100)
+[2026-03-06T18:35:03+01:00] Raw item saved: https://dailytrust.com/boko-haram-brags-about-killing-soldiers-vows-to-turn-borno-community-to-caliphate/ (source_type=rss)
+[2026-03-06T18:35:03+01:00] Candidate saved: https://dailytrust.com/boko-haram-brags-about-killing-soldiers-vows-to-turn-borno-community-to-caliphate/ (score: 100)
+[2026-03-06T18:35:05+01:00] Raw item saved: https://dailytrust.com/obi-how-many-more-lives-must-be-lost-before-action-is-taken/ (source_type=rss)
+[2026-03-06T18:35:05+01:00] Candidate saved: https://dailytrust.com/obi-how-many-more-lives-must-be-lost-before-action-is-taken/ (score: 91)
+[2026-03-06T18:35:05+01:00] Raw item saved: https://dailytrust.com/obi-how-many-more-lives-must-be-lost-before-action-is-taken/ (source_type=rss)
+[2026-03-06T18:35:05+01:00] Candidate saved: https://dailytrust.com/obi-how-many-more-lives-must-be-lost-before-action-is-taken/ (score: 91)
+[2026-03-06T18:35:07+01:00] Raw item saved: https://dailytrust.com/alleged-money-laundering-court-grants-malami-wife-son-n200m-bail-each/ (source_type=rss)
+[2026-03-06T18:35:07+01:00] Raw item saved: https://dailytrust.com/alleged-money-laundering-court-grants-malami-wife-son-n200m-bail-each/ (source_type=rss)
+[2026-03-06T18:35:09+01:00] Raw item saved: https://dailytrust.com/minor-allegedly-kills-guardian-after-failed-attempts-in-kwara/ (source_type=rss)
+[2026-03-06T18:35:09+01:00] Candidate saved: https://dailytrust.com/minor-allegedly-kills-guardian-after-failed-attempts-in-kwara/ (score: 75)
+[2026-03-06T18:35:09+01:00] Raw item saved: https://dailytrust.com/minor-allegedly-kills-guardian-after-failed-attempts-in-kwara/ (source_type=rss)
+[2026-03-06T18:35:09+01:00] Candidate saved: https://dailytrust.com/minor-allegedly-kills-guardian-after-failed-attempts-in-kwara/ (score: 75)
+[2026-03-06T18:35:10+01:00] Raw item saved: https://dailytrust.com/thugs-set-adc-secretariat-ablaze-as-amaechi-arrives-for-registration/ (source_type=rss)
+[2026-03-06T18:35:10+01:00] Candidate saved: https://dailytrust.com/thugs-set-adc-secretariat-ablaze-as-amaechi-arrives-for-registration/ (score: 99)
+[2026-03-06T18:35:10+01:00] Raw item saved: https://dailytrust.com/thugs-set-adc-secretariat-ablaze-as-amaechi-arrives-for-registration/ (source_type=rss)
+[2026-03-06T18:35:10+01:00] Candidate saved: https://dailytrust.com/thugs-set-adc-secretariat-ablaze-as-amaechi-arrives-for-registration/ (score: 99)
+[2026-03-06T18:35:14+01:00] Raw item saved: https://dailytrust.com/army-kills-kidnapper-rescues-4-victims-in-edo/ (source_type=rss)
+[2026-03-06T18:35:14+01:00] Candidate saved: https://dailytrust.com/army-kills-kidnapper-rescues-4-victims-in-edo/ (score: 77)
+[2026-03-06T18:35:14+01:00] Run end | raw_saved=9, candidates_saved=7, duplicates_skipped=21, errors=6
+[2026-03-06T18:35:14+01:00] Raw item saved: https://dailytrust.com/army-kills-kidnapper-rescues-4-victims-in-edo/ (source_type=rss)
+[2026-03-06T18:35:14+01:00] Candidate saved: https://dailytrust.com/army-kills-kidnapper-rescues-4-victims-in-edo/ (score: 77)
+[2026-03-06T18:35:14+01:00] Run end | raw_saved=29, candidates_saved=24, duplicates_skipped=1, errors=6
+[2026-03-07T17:23:19+01:00] Run start
+[2026-03-07T17:23:19+01:00] Processing source: Punch
+[2026-03-07T17:23:27+01:00] RSS fetch failed: https://punchng.com/feed (HTTP 403)
+[2026-03-07T17:23:39+01:00] Listing fetch failed: https://punchng.com/topics/news/ (Operation timed out after 12009 milliseconds with 589058 bytes received)
+[2026-03-07T17:23:45+01:00] Listing fetch failed: https://punchng.com/topics/metro-plus/ (HTTP 403)
+[2026-03-07T17:23:45+01:00] Processing source: Vanguard
+[2026-03-07T17:23:48+01:00] RSS fetch failed: https://www.vanguardngr.com/feed (HTTP 403)
+[2026-03-07T17:23:51+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-07T17:23:57+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-07T17:23:57+01:00] Processing source: Premium Times
+[2026-03-07T17:24:00+01:00] RSS parse failed: https://www.premiumtimesng.com/feed (Invalid XML)
+[2026-03-07T17:24:05+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-07T17:24:05+01:00] Links found from listing: 0
+[2026-03-07T17:24:10+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-07T17:24:10+01:00] Links found from listing: 0
+[2026-03-07T17:24:10+01:00] Processing source: Nigerian Tribune
+[2026-03-07T17:24:14+01:00] RSS fetch failed: https://tribuneonlineng.com/feed (HTTP 403)
+[2026-03-07T17:24:22+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-07T17:24:32+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-07T17:24:32+01:00] Processing source: Daily Trust
+[2026-03-07T17:24:43+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-07T17:24:43+01:00] Links found from listing: 0
+[2026-03-07T17:24:46+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-07T17:24:46+01:00] Links found from listing: 1
+[2026-03-07T17:24:50+01:00] Raw item saved: https://dailytrust.com/vandals-arrested-with-stolen-electric-cables-in-nasarawa/ (source_type=rss)
+[2026-03-07T17:24:53+01:00] Raw item saved: https://dailytrust.com/uba-sani-to-journalists-beware-of-latter-day-activists/ (source_type=rss)
+[2026-03-07T17:24:53+01:00] Candidate saved: https://dailytrust.com/uba-sani-to-journalists-beware-of-latter-day-activists/ (score: 67)
+[2026-03-07T17:24:56+01:00] Raw item saved: https://dailytrust.com/death-toll-in-benue-lga-attacks-rises-to-24/ (source_type=rss)
+[2026-03-07T17:24:56+01:00] Candidate saved: https://dailytrust.com/death-toll-in-benue-lga-attacks-rises-to-24/ (score: 67)
+[2026-03-07T17:25:07+01:00] Raw item saved: https://dailytrust.com/petrol-hits-%e2%82%a61080-per-litre-in-lagos/ (source_type=rss)
+[2026-03-07T17:25:18+01:00] Raw item saved: https://dailytrust.com/gunmen-attack-amaechis-convoy-raze-adc-secretariat-in-rivers/ (source_type=rss)
+[2026-03-07T17:25:18+01:00] Candidate saved: https://dailytrust.com/gunmen-attack-amaechis-convoy-raze-adc-secretariat-in-rivers/ (score: 100)
+[2026-03-08T07:41:40+01:00] Run start
+[2026-03-08T07:41:40+01:00] Processing source: Punch
+[2026-03-08T07:41:41+01:00] RSS fetch failed: https://punchng.com/feed (HTTP 403)
+[2026-03-08T07:41:46+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-08T07:41:46+01:00] Links found from listing: 1
+[2026-03-08T07:41:47+01:00] Listing fetch failed: https://punchng.com/topics/metro-plus/ (HTTP 403)
+[2026-03-08T07:41:47+01:00] Skipped seen URL: https://punchng.com/topics/news/
+[2026-03-08T07:41:47+01:00] Processing source: Vanguard
+[2026-03-08T07:41:47+01:00] RSS fetch failed: https://www.vanguardngr.com/feed (HTTP 403)
+[2026-03-08T07:41:49+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-08T07:41:50+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-08T07:41:50+01:00] Processing source: Premium Times
+[2026-03-08T07:41:53+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-08T07:41:53+01:00] Links found from listing: 26
+[2026-03-08T07:41:55+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-08T07:41:55+01:00] Links found from listing: 31
+[2026-03-08T07:41:57+01:00] Raw item saved: https://www.premiumtimesng.com/foreign/862296-iwd-2026-women-hold-just-64-legal-rights-men-enjoy-un.html (source_type=rss)
+[2026-03-08T07:42:01+01:00] Raw item saved: https://www.premiumtimesng.com/foreign/862293-iran-attacks-threaten-regional-global-stability-erdogan-tells-starmer.html (source_type=rss)
+[2026-03-08T07:42:05+01:00] Raw item saved: https://www.premiumtimesng.com/regional/ssouth-west/862290-hoodlums-attack-lg-congresses-of-wikes-pdp-faction-in-oyo.html (source_type=rss)
+[2026-03-08T07:42:05+01:00] Candidate saved: https://www.premiumtimesng.com/regional/ssouth-west/862290-hoodlums-attack-lg-congresses-of-wikes-pdp-faction-in-oyo.html (score: 93)
+[2026-03-08T07:42:07+01:00] Raw item saved: https://www.premiumtimesng.com/news/more-news/862287-apc-shocked-over-members-alleged-role-in-ebonyi-traditional-rulers-kidnap-killing.html (source_type=rss)
+[2026-03-08T07:42:07+01:00] Candidate saved: https://www.premiumtimesng.com/news/more-news/862287-apc-shocked-over-members-alleged-role-in-ebonyi-traditional-rulers-kidnap-killing.html (score: 73)
+[2026-03-08T07:42:09+01:00] Raw item saved: https://www.premiumtimesng.com/regional/nnorth-east/862285-soldiers-repelled-coordinated-boko-haram-attacks-on-borno-communities-nigerian-army.html (source_type=rss)
+[2026-03-08T07:42:09+01:00] Candidate saved: https://www.premiumtimesng.com/regional/nnorth-east/862285-soldiers-repelled-coordinated-boko-haram-attacks-on-borno-communities-nigerian-army.html (score: 100)
+[2026-03-08T07:42:10+01:00] Raw item saved: https://www.premiumtimesng.com/news/top-news/862281-ramadan-siege-rising-terror-attacks-in-islamic-holy-month-shake-northern-nigeria.html (source_type=rss)
+[2026-03-08T07:42:10+01:00] Candidate saved: https://www.premiumtimesng.com/news/top-news/862281-ramadan-siege-rising-terror-attacks-in-islamic-holy-month-shake-northern-nigeria.html (score: 100)
+[2026-03-08T07:42:12+01:00] Raw item saved: https://www.premiumtimesng.com/entertainment/naija-fashion/862278-cooking-on-public-roads-is-prohibited-lagos-govt-warns-sarah-martins.html (source_type=rss)
+[2026-03-08T07:42:15+01:00] Raw item saved: https://www.premiumtimesng.com/promoted/862274-gateway-airport-critical-to-cargo-movement-in-nigeria-shippers-council-ceo.html (source_type=rss)
+[2026-03-08T07:42:17+01:00] Raw item saved: https://www.premiumtimesng.com/promoted/862270-let-faith-inspire-compassion-and-service-abiodun-urges-muslims-at-iftar.html (source_type=rss)
+[2026-03-08T07:42:17+01:00] Candidate saved: https://www.premiumtimesng.com/promoted/862270-let-faith-inspire-compassion-and-service-abiodun-urges-muslims-at-iftar.html (score: 63)
+[2026-03-08T07:42:22+01:00] Raw item saved: https://www.premiumtimesng.com/promoted/862268-enugu-govt-gives-property-owners-90-days-to-regularise-building-plans.html (source_type=rss)
+[2026-03-08T07:42:22+01:00] Candidate saved: https://www.premiumtimesng.com/promoted/862268-enugu-govt-gives-property-owners-90-days-to-regularise-building-plans.html (score: 63)
+[2026-03-08T07:42:22+01:00] Processing source: Nigerian Tribune
+[2026-03-08T07:42:23+01:00] RSS fetch failed: https://tribuneonlineng.com/feed (HTTP 403)
+[2026-03-08T07:42:24+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-08T07:42:26+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-08T07:42:26+01:00] Processing source: Daily Trust
+[2026-03-08T07:42:30+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-08T07:42:30+01:00] Links found from listing: 0
+[2026-03-08T07:42:32+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-08T07:42:32+01:00] Links found from listing: 1
+[2026-03-08T07:42:35+01:00] Raw item saved: https://dailytrust.com/fa-cup-manchester-city-beat-newcastle-to-join-chelsea-asenal-in-quarter-finals/ (source_type=rss)
+[2026-03-08T07:42:37+01:00] Raw item saved: https://dailytrust.com/al-jazeera-interview-i-never-knew-i-would-be-challenged-about-my-past-bwala/ (source_type=rss)
+[2026-03-08T07:42:39+01:00] Raw item saved: https://dailytrust.com/kidnapper-shot-dead-as-troops-rescue-victims-abducted-in-abuja/ (source_type=rss)
+[2026-03-08T07:42:39+01:00] Candidate saved: https://dailytrust.com/kidnapper-shot-dead-as-troops-rescue-victims-abducted-in-abuja/ (score: 100)
+[2026-03-08T07:42:41+01:00] Raw item saved: https://dailytrust.com/osimhen-upstages-ndidi-scores-winner-for-galatasaray-in-istanbul-derby/ (source_type=rss)
+[2026-03-08T07:42:43+01:00] Raw item saved: https://dailytrust.com/russia-flag-raised-in-paralympics-for-the-first-time-in-10-years/ (source_type=rss)
+[2026-03-08T07:42:45+01:00] Raw item saved: https://dailytrust.com/obasogie-cleared-of-match-fixing-gambling-allegation-in-tanzania/ (source_type=rss)
+[2026-03-08T07:42:47+01:00] Raw item saved: https://dailytrust.com/army-buries-soldiers-murdered-by-terrorists/ (source_type=rss)
+[2026-03-08T07:42:47+01:00] Candidate saved: https://dailytrust.com/army-buries-soldiers-murdered-by-terrorists/ (score: 95)
+[2026-03-08T07:42:49+01:00] Raw item saved: https://dailytrust.com/fg-approves-50000-additional-slots-for-2026-nysc-mobilisation/ (source_type=rss)
+[2026-03-08T07:42:51+01:00] Raw item saved: https://dailytrust.com/zulum-insurgents-strike-ngoshe-after-being-chased-from-sambisa/ (source_type=rss)
+[2026-03-08T07:42:51+01:00] Candidate saved: https://dailytrust.com/zulum-insurgents-strike-ngoshe-after-being-chased-from-sambisa/ (score: 97)
+[2026-03-08T07:42:53+01:00] Raw item saved: https://dailytrust.com/alkaleri-the-new-hotbed-of-banditry/ (source_type=rss)
+[2026-03-08T07:42:53+01:00] Candidate saved: https://dailytrust.com/alkaleri-the-new-hotbed-of-banditry/ (score: 100)
+[2026-03-08T07:42:53+01:00] Run end | raw_saved=20, candidates_saved=10, duplicates_skipped=1, errors=8
+[2026-03-08T16:47:09+01:00] Run start
+[2026-03-08T16:47:09+01:00] Processing source: Punch
+[2026-03-08T16:47:09+01:00] RSS fetch failed: https://punchng.com/feed (HTTP 403)
+[2026-03-08T16:47:12+01:00] Listing fetched: https://punchng.com/topics/news/
+[2026-03-08T16:47:12+01:00] Links found from listing: 1
+[2026-03-08T16:47:12+01:00] Listing fetch failed: https://punchng.com/topics/metro-plus/ (HTTP 403)
+[2026-03-08T16:47:12+01:00] Skipped seen URL: https://punchng.com/topics/news/
+[2026-03-08T16:47:12+01:00] Processing source: Vanguard
+[2026-03-08T16:47:13+01:00] RSS fetch failed: https://www.vanguardngr.com/feed (HTTP 403)
+[2026-03-08T16:47:14+01:00] Listing fetch failed: https://www.vanguardngr.com/category/national-news/ (HTTP 403)
+[2026-03-08T16:47:15+01:00] Listing fetch failed: https://www.vanguardngr.com/category/metro/ (HTTP 403)
+[2026-03-08T16:47:15+01:00] Processing source: Premium Times
+[2026-03-08T16:47:17+01:00] Listing fetched: https://www.premiumtimesng.com/news/headlines
+[2026-03-08T16:47:17+01:00] Links found from listing: 24
+[2026-03-08T16:47:20+01:00] Listing fetched: https://www.premiumtimesng.com/news/top-news
+[2026-03-08T16:47:20+01:00] Links found from listing: 29
+[2026-03-08T16:47:22+01:00] Raw item saved: https://www.premiumtimesng.com/sports/nigeria-sports-news/862373-nbbf-aspirant-igoche-mark-pledges-unity-growth-for-nigerian-basketball.html (source_type=rss)
+[2026-03-08T16:47:25+01:00] Raw item saved: https://www.premiumtimesng.com/news/headlines/862371-nigerias-renewed-closeness-with-france-did-not-start-under-tinubu-french-ambassador.html (source_type=rss)
+[2026-03-08T16:47:27+01:00] Raw item saved: https://www.premiumtimesng.com/news/862368-iwd-adc-reserves-40-party-positions-for-women-at-all-levels-spokesperson.html (source_type=rss)
+[2026-03-08T16:47:28+01:00] Raw item saved: https://www.premiumtimesng.com/news/top-news/862365-police-confirm-appointment-of-anthony-placid-as-new-spokesperson.html (source_type=rss)
+[2026-03-08T16:47:28+01:00] Candidate saved: https://www.premiumtimesng.com/news/top-news/862365-police-confirm-appointment-of-anthony-placid-as-new-spokesperson.html (score: 85)
+[2026-03-08T16:47:30+01:00] Raw item saved: https://www.premiumtimesng.com/business/business-news/862361-again-dangote-refinery-raises-petrol-gantry-price-as-iran-conflict-rattles-oil-market.html (source_type=rss)
+[2026-03-08T16:47:34+01:00] Raw item saved: https://www.premiumtimesng.com/promoted/862357-gateway-airport-ogun-targets-international-operations-to-begin-with-hajj.html (source_type=rss)
+[2026-03-08T16:47:35+01:00] Raw item saved: https://www.premiumtimesng.com/health/health-news/862354-international-womens-day-group-calls-for-action-to-address-inequalities-affecting-women-girls.html (source_type=rss)
+[2026-03-08T16:47:35+01:00] Candidate saved: https://www.premiumtimesng.com/health/health-news/862354-international-womens-day-group-calls-for-action-to-address-inequalities-affecting-women-girls.html (score: 69)
+[2026-03-08T16:47:37+01:00] Raw item saved: https://www.premiumtimesng.com/opinion/862349-in-nigeria-a-judge-is-not-above-or-beyond-investigation-by-chidi-anselm-odinkalu.html (source_type=rss)
+[2026-03-08T16:47:37+01:00] Candidate saved: https://www.premiumtimesng.com/opinion/862349-in-nigeria-a-judge-is-not-above-or-beyond-investigation-by-chidi-anselm-odinkalu.html (score: 71)
+[2026-03-08T16:47:38+01:00] Raw item saved: https://www.premiumtimesng.com/opinion/862337-ndoma-egba-calm-and-dignified-at-70-by-sam-akpe.html (source_type=rss)
+[2026-03-08T16:47:38+01:00] Candidate saved: https://www.premiumtimesng.com/opinion/862337-ndoma-egba-calm-and-dignified-at-70-by-sam-akpe.html (score: 75)
+[2026-03-08T16:47:41+01:00] Raw item saved: https://www.premiumtimesng.com/features-and-interviews/862317-interview-frances-presence-in-africa-has-never-been-so-big-despite-aes-french-ambassador.html (source_type=rss)
+[2026-03-08T16:47:41+01:00] Candidate saved: https://www.premiumtimesng.com/features-and-interviews/862317-interview-frances-presence-in-africa-has-never-been-so-big-despite-aes-french-ambassador.html (score: 100)
+[2026-03-08T16:47:41+01:00] Processing source: Nigerian Tribune
+[2026-03-08T16:47:42+01:00] RSS fetch failed: https://tribuneonlineng.com/feed (HTTP 403)
+[2026-03-08T16:47:42+01:00] Listing fetch failed: https://tribuneonlineng.com/category/news/ (HTTP 403)
+[2026-03-08T16:47:43+01:00] Listing fetch failed: https://tribuneonlineng.com/category/metro/ (HTTP 403)
+[2026-03-08T16:47:43+01:00] Processing source: Daily Trust
+[2026-03-08T16:47:46+01:00] Listing fetched: https://dailytrust.com/category/news/
+[2026-03-08T16:47:46+01:00] Links found from listing: 0
+[2026-03-08T16:47:47+01:00] Listing fetched: https://dailytrust.com/category/metro/
+[2026-03-08T16:47:47+01:00] Links found from listing: 1
+[2026-03-08T16:47:49+01:00] Raw item saved: https://dailytrust.com/hardship-how-fct-women-converted-their-private-cars-for-commercial-use/ (source_type=rss)
+[2026-03-08T16:47:50+01:00] Raw item saved: https://dailytrust.com/anthony-placid-replaces-benjamin-hundeyin-as-force-pro/ (source_type=rss)
+[2026-03-08T16:47:50+01:00] Candidate saved: https://dailytrust.com/anthony-placid-replaces-benjamin-hundeyin-as-force-pro/ (score: 91)
+[2026-03-08T16:47:51+01:00] Raw item saved: https://dailytrust.com/troops-rescue-two-bank-workers-after-foiled-kidnap-attempt-in-taraba/ (source_type=rss)
+[2026-03-08T16:47:51+01:00] Candidate saved: https://dailytrust.com/troops-rescue-two-bank-workers-after-foiled-kidnap-attempt-in-taraba/ (score: 100)
+[2026-03-08T16:47:52+01:00] Raw item saved: https://dailytrust.com/one-dead-six-injured-in-lagos-autocrash/ (source_type=rss)
+[2026-03-08T16:47:52+01:00] Candidate saved: https://dailytrust.com/one-dead-six-injured-in-lagos-autocrash/ (score: 100)
+[2026-03-08T16:47:53+01:00] Raw item saved: https://dailytrust.com/middle-east-crisis-could-spiral-beyond-anyones-control-un-chief-warns/ (source_type=rss)
+[2026-03-08T16:47:53+01:00] Candidate saved: https://dailytrust.com/middle-east-crisis-could-spiral-beyond-anyones-control-un-chief-warns/ (score: 63)
+[2026-03-08T16:47:54+01:00] Raw item saved: https://dailytrust.com/army-dismisses-reports-on-murder-of-40-soldiers-in-borno/ (source_type=rss)
+[2026-03-08T16:47:54+01:00] Candidate saved: https://dailytrust.com/army-dismisses-reports-on-murder-of-40-soldiers-in-borno/ (score: 91)
+[2026-03-08T16:47:55+01:00] Raw item saved: https://dailytrust.com/discos-generated-n207bn-from-power-bills-in-december-nerc/ (source_type=rss)
+[2026-03-08T16:47:55+01:00] Candidate saved: https://dailytrust.com/discos-generated-n207bn-from-power-bills-in-december-nerc/ (score: 73)
+[2026-03-08T16:47:56+01:00] Raw item saved: https://dailytrust.com/police-begin-screening-for-constable-recruitment/ (source_type=rss)
+[2026-03-08T16:47:57+01:00] Raw item saved: https://dailytrust.com/impeachment-kwankwasiyya-tenders-document-showing-n1-1bn-was-released-with-govs-approval/ (source_type=rss)
+[2026-03-08T16:47:58+01:00] Raw item saved: https://dailytrust.com/lagos-coastal-highway-winhomes-ceo-clarifies-250m-claim-others/ (source_type=rss)
+[2026-03-08T16:47:58+01:00] Candidate saved: https://dailytrust.com/lagos-coastal-highway-winhomes-ceo-clarifies-250m-claim-others/ (score: 63)
+[2026-03-08T16:47:58+01:00] Run end | raw_saved=20, candidates_saved=12, duplicates_skipped=1, errors=8

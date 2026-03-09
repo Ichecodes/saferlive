@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Discovery Candidates Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <style>
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+    .toolbar input, .toolbar select { padding:8px 10px; border-radius:8px; border:1px solid var(--border); background:transparent; color:var(--fg); }
+    .summary-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:14px; }
+    .summary-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px; }
+    .summary-card .label { color:var(--muted); font-size:12px; }
+    .summary-card .value { font-size:20px; font-weight:700; }
+    .run-controls { display:flex; gap:8px; align-items:center; margin-bottom:14px; flex-wrap:wrap; }
+    .pill { padding:4px 8px; border-radius:999px; font-size:12px; border:1px solid var(--border); }
+    .pill.yes { background:rgba(6,156,86,0.18); }
+    .pill.no { background:rgba(211,33,44,0.18); }
+    .pager { display:flex; gap:8px; justify-content:flex-end; align-items:center; margin-top:10px; }
+    .modal-content pre { max-height:220px; overflow:auto; white-space:pre-wrap; background:rgba(0,0,0,0.25); padding:10px; border-radius:8px; }
+    .detail-grid { display:grid; gap:10px; grid-template-columns: 1fr 1fr; }
+    @media(max-width:800px){ .detail-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header class="admin-header centered">
+    <h1>Discovery Candidate Review</h1>
+  </header>
+
+  <main class="admin-main">
+    <section class="summary-grid" id="summaryGrid">
+      <div class="summary-card"><div class="label">Total Reviewed</div><div class="value" id="sumReviewed">0</div></div>
+      <div class="summary-card"><div class="label">Candidates</div><div class="value" id="sumCandidates">0</div></div>
+      <div class="summary-card"><div class="label">Non-Candidates</div><div class="value" id="sumNonCandidates">0</div></div>
+      <div class="summary-card"><div class="label">Pending</div><div class="value" id="sumPending">0</div></div>
+      <div class="summary-card"><div class="label">Approved</div><div class="value" id="sumApproved">0</div></div>
+      <div class="summary-card"><div class="label">Rejected</div><div class="value" id="sumRejected">0</div></div>
+    </section>
+
+    <section class="run-controls table-card">
+      <button id="runBatchBtn" class="btn">Run detection for latest undecided items</button>
+      <label for="runLimit">Limit</label>
+      <input id="runLimit" type="number" min="1" max="1000" value="100">
+      <span id="runStatus" class="loading"></span>
+    </section>
+
+    <section class="table-card">
+      <div class="toolbar">
+        <input id="q" type="text" placeholder="Search title/body/author/url">
+        <select id="platformFilter">
+          <option value="">All Platforms</option>
+          <option value="x">x</option>
+          <option value="rss">rss</option>
+          <option value="news">news</option>
+          <option value="blog">blog</option>
+          <option value="manual">manual</option>
+          <option value="agency">agency</option>
+          <option value="instagram">instagram</option>
+        </select>
+        <select id="candidateFilter">
+          <option value="">Candidate: All</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <select id="reviewFilter">
+          <option value="">Review: All</option>
+          <option value="pending">pending</option>
+          <option value="checked">checked</option>
+          <option value="approved">approved</option>
+          <option value="rejected">rejected</option>
+        </select>
+        <input id="minScore" type="number" min="0" max="100" step="0.5" placeholder="Min score">
+        <input id="dateFrom" type="date">
+        <input id="dateTo" type="date">
+        <button id="applyFiltersBtn" class="btn">Apply</button>
+        <button id="resetFiltersBtn" class="btn view-btn">Reset</button>
+      </div>
+
+      <table id="candidatesTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Platform</th>
+            <th>Title / Preview</th>
+            <th>Candidate</th>
+            <th>Score</th>
+            <th>Review</th>
+            <th>Posted/Fetched</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="pager">
+        <button id="prevPageBtn" class="btn view-btn">Prev</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPageBtn" class="btn view-btn">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="detailModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeDetailBtn" class="btn-close">Close</button>
+      <div id="detailBody"></div>
+    </div>
+  </div>
+
+  <script src="../scripts/discovery-candidates.js" defer></script>
+</body>
+</html>
+
